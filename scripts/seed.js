@@ -340,6 +340,24 @@ async function seed() {
         display_order: 6
       },
       {
+        company: "Philam Life",
+        role: "Financial Advisor",
+        location: "Davao, Philippines",
+        employment_type: "Full-time",
+        start_date: "October 2013",
+        end_date: "March 2014",
+        duration: "6 months",
+        is_current: false,
+        description: "Provided financial solutions and assisted personal financial management using services offered by Philam Life.",
+        achievements: [
+          "Family Secure: Advised clients and tailored comprehensive financial protection, life insurance, and retirement plans for primary household breadwinners.",
+          "Education: Structured personalized financial roadmaps and dedicated funding programs for children's future education funds.",
+          "Investments & Wealth Management: Guided clients on long-term investment portfolios, wealth accumulation, and asset protection strategies."
+        ],
+        technologies: ["Banking / Financial Services", "Financial Planning", "Wealth Management", "Marketing", "Public Relations"],
+        display_order: 7
+      },
+      {
         company: "Caraga State University",
         role: "Geographic Information Systems Analyst",
         location: "Butuan, Caraga, Philippines",
@@ -355,7 +373,7 @@ async function seed() {
           "Built and launched official organizational portal using Drupal CMS."
         ],
         technologies: ["ArcGIS", "Geospatial Data", "Drupal", "PHP", "Cartography"],
-        display_order: 7
+        display_order: 8
       },
       {
         company: "Green Pine Agricultural Development Corporation",
@@ -372,7 +390,7 @@ async function seed() {
           "Conducted statistical audits resolving inventory discrepancies and submitting weekly executive summaries."
         ],
         technologies: ["Data Analytics", "Audit & Reconciliations", "Executive Reporting"],
-        display_order: 8
+        display_order: 9
       }
     ];
 
