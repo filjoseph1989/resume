@@ -1,0 +1,1677 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fil Joseph Elman | Technical Lead & Full-Stack Developer</title>
+  <meta name="description" content="Technical Lead, Full-Stack Developer, and API Integration Specialist with expertise in PHP (Laravel, CodeIgniter), Python, AI, IoT, and high-throughput systems.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Ambient background glow effect -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-brand-badge">FE</div>
+          <span>Fil Joseph Elman</span>
+        </a>
+
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#summary" class="nav-link">Summary</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#references" class="nav-link">References</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <!-- Icon injected by script.js -->
+          </button>
+          <button id="admin-toggle-btn" class="btn btn-secondary" title="Manage & Edit Resume Data in PostgreSQL">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            <span>Edit Data</span>
+          </button>
+          <button onclick="handlePrint()" class="btn btn-primary" title="Print or save as PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div class="hero-info">
+            <div class="status-pill">
+              <span class="status-dot"></span>
+              Available for Technical Leadership & Full-Stack Roles
+            </div>
+            <h1 class="hero-name">Fil Joseph Elman</h1>
+            <p class="hero-tagline">
+              Technical Lead &bull; Full-Stack Developer &bull; API Integration &bull; PHP &bull; Python &bull; IoT &bull; Artificial Intelligence
+            </p>
+            <p class="hero-location">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Davao, Davao Region, Philippines
+            </p>
+
+            <div class="hero-actions">
+              <button onclick="copyToClipboard('filjoseph22@gmail.com', 'Email copied to clipboard!')" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Copy Email</span>
+              </button>
+
+              <button onclick="copyToClipboard('+639124918787', 'Phone number copied to clipboard!')" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Copy Phone</span>
+              </button>
+
+              <button id="btn-view-markdown" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>View Raw Markdown</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Badges Grid -->
+        <div class="contact-grid">
+          <a href="mailto:filjoseph22@gmail.com" class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">filjoseph22@gmail.com</span>
+            </div>
+          </a>
+
+          <a href="tel:+639124918787" class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <div>
+              <span class="contact-label">Phone</span>
+              <span class="contact-value">+63 912 491 8787</span>
+            </div>
+          </a>
+
+          <a href="https://linkedin.com/in/filjoseph" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">in/filjoseph</span>
+            </div>
+          </a>
+
+          <a href="https://filjoseph1989.github.io" target="_blank" rel="noopener noreferrer" class="contact-item">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <div>
+              <span class="contact-label">Portfolio</span>
+              <span class="contact-value">filjoseph1989.github.io</span>
+            </div>
+          </a>
+
+          <div class="contact-item contact-item-address">
+            <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            <div>
+              <span class="contact-label">Address</span>
+              <span class="contact-value">Lot 32, Block 8, Fori St, Navonna Subd., Davao City, Davao Region, Philippines</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls Bar: Real-time Search & View Mode -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search skills, projects, companies, technologies..." autocomplete="off">
+      </div>
+
+      <div class="view-controls">
+        <div class="mode-toggle">
+          <button id="view-detailed" class="mode-btn active">Detailed View</button>
+          <button id="view-recruiter" class="mode-btn">Recruiter View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Professional Summary -->
+    <section id="summary" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Professional Summary
+        </h2>
+      </div>
+
+      <div class="summary-card">
+        <p>
+          My journey in software development has been driven by a relentless curiosity and a passion for turning ideas into reality. What started as a Computer Science degree quickly grew into a multifaceted career, beginning with roles in data analysis and GIS, where I learned the importance of precision and structure. This foundation paved the way for my transition into full-stack development.
+        </p>
+        <p>
+          I have spent years honing my skills, building a deep expertise in PHP frameworks like Laravel and CodeIgniter, as well as content management systems like WordPress and Drupal. I've had the privilege of developing a wide array of solutions, including e-commerce platforms, custom client websites, and critical modules for Point of Sale (POS) systems covering everything from authentication to item management.
+        </p>
+        <p>
+          Now, as a Technical Lead, I apply this broad experience to guide complex projects, most notably leading the successful API integration of a major client. I am just as comfortable architecting a backend system as I am implementing a UI, assisting with DevOps, or resolving a critical production issue.
+        </p>
+
+        <!-- Key Areas of Expertise -->
+        <div class="expertise-grid">
+          <div class="expertise-item">
+            <div class="expertise-title">
+              <span>⚡</span> Full-Stack Development
+            </div>
+            <div class="expertise-desc">
+              End-to-end creation of scalable web applications, responsive interfaces, and performant backend services.
+            </div>
+          </div>
+
+          <div class="expertise-item">
+            <div class="expertise-title">
+              <span>🔄</span> API Integration
+            </div>
+            <div class="expertise-desc">
+              Connecting disparate enterprise systems, transcoding payloads, and building reliable webhook pipelines.
+            </div>
+          </div>
+
+          <div class="expertise-item">
+            <div class="expertise-title">
+              <span>🛡️</span> Backend Systems
+            </div>
+            <div class="expertise-desc">
+              Building robust core business logic for POS platforms, e-commerce stores, and high-load business apps.
+            </div>
+          </div>
+
+          <div class="expertise-item">
+            <div class="expertise-title">
+              <span>🧰</span> Versatile Technologies
+            </div>
+            <div class="expertise-desc">
+              Extensive hands-on proficiency in PHP (Laravel, CodeIgniter), Python, WordPress, Drupal, GIS, and modern JavaScript.
+            </div>
+          </div>
+
+          <div class="expertise-item">
+            <div class="expertise-title">
+              <span>🎯</span> Problem Solving
+            </div>
+            <div class="expertise-desc">
+              Proven diagnosis of complex production bugs, query optimization, and rapid delivery of resilient solutions.
+            </div>
+          </div>
+        </div>
+
+        <p style="font-style: italic; color: var(--accent-light); margin-top: 12px;">
+          "I am always looking for new challenges and opportunities to learn. Let's connect!"
+        </p>
+      </div>
+    </section>
+
+    <!-- Section: Skills & Qualifications -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Skills & Qualifications
+        </h2>
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Click any skill chip to filter timeline & projects</span>
+      </div>
+
+      <div class="skills-dashboard">
+        <!-- Backend & Languages -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-name">
+              <span>💻</span> Backend & Languages
+            </div>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip" data-skill="PHP">PHP <span class="skill-chip-years">11 yrs</span></span>
+            <span class="skill-chip" data-skill="JavaScript">JavaScript <span class="skill-chip-years">11 yrs</span></span>
+            <span class="skill-chip" data-skill="Node.js">Node.js <span class="skill-chip-years">6 yrs</span></span>
+            <span class="skill-chip" data-skill="Python">Python <span class="skill-chip-years">1 yr</span></span>
+            <span class="skill-chip" data-skill="Java">Java</span>
+            <span class="skill-chip" data-skill="TypeScript">TypeScript <span class="skill-chip-years">&lt;1 yr</span></span>
+            <span class="skill-chip" data-skill="Express.js">Express.js <span class="skill-chip-years">&lt;1 yr</span></span>
+          </div>
+        </div>
+
+        <!-- Frontend & Frameworks -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-name">
+              <span>🎨</span> Frontend & UI Frameworks
+            </div>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip" data-skill="HTML">HTML5 <span class="skill-chip-years">11 yrs</span></span>
+            <span class="skill-chip" data-skill="CSS">CSS3 <span class="skill-chip-years">11 yrs</span></span>
+            <span class="skill-chip" data-skill="React">ReactJS <span class="skill-chip-years">3 yrs</span></span>
+            <span class="skill-chip" data-skill="Tailwind">Tailwind CSS <span class="skill-chip-years">3 yrs</span></span>
+            <span class="skill-chip" data-skill="Next.js">Next.js</span>
+            <span class="skill-chip" data-skill="Nuxt.js">Nuxt.js</span>
+            <span class="skill-chip" data-skill="Bootstrap">Bootstrap 2 / 3</span>
+            <span class="skill-chip" data-skill="jQuery">jQuery</span>
+            <span class="skill-chip" data-skill="Svelte">Svelte <span class="skill-chip-years">&lt;1 yr</span></span>
+            <span class="skill-chip" data-skill="Remix">Remix <span class="skill-chip-years">&lt;1 yr</span></span>
+          </div>
+        </div>
+
+        <!-- Frameworks, CMS & Starter Kits -->
+        <div class="skill-category-card">
+          <div class="skill-category-header">
+            <div class="skill-category-name">
+              <span>🚀</span> Frameworks, CMS & Architecture
+            </div>
+          </div>
+          <div class="skill-chips">
+            <span class="skill-chip" data-skill="Laravel">Laravel (v5 - latest)</span>
+            <span class="skill-chip" data-skill="CodeIgniter">CodeIgniter 3</span>
+            <span class="skill-chip" data-skill="WordPress">WordPress (Themes & Plugins)</span>
+            <span class="skill-chip" data-skill="Drupal">Drupal</span>
+            <span class="skill-chip" data-skill="Laraship">Laraship</span>
+            <span class="skill-chip" data-skill="AI">Artificial Intelligence (AI)</span>
+            <span class="skill-chip" data-skill="IoT">Internet of Things (IoT)</span>
+            <span class="skill-chip" data-skill="GIS">GIS (ArcGIS)</span>
+          </div>
+        </div>
+
+        <!-- Databases, DevOps & Media Tools -->
+        <div class="dual-grid">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-name">
+                <span>🗄️</span> Databases & Systems
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip" data-skill="MySQL">MySQL <span class="skill-chip-years">7 yrs</span></span>
+              <span class="skill-chip" data-skill="PostgreSQL">PostgreSQL <span class="skill-chip-years">3 yrs</span></span>
+              <span class="skill-chip" data-skill="Git">Git <span class="skill-chip-years">11 yrs</span></span>
+              <span class="skill-chip" data-skill="Ubuntu">Ubuntu / Linux <span class="skill-chip-years">11 yrs</span></span>
+              <span class="skill-chip" data-skill="Apache">Apache <span class="skill-chip-years">11 yrs</span></span>
+              <span class="skill-chip" data-skill="Docker">Docker</span>
+              <span class="skill-chip" data-skill="Rsync">Rsync</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-name">
+                <span>🎬</span> Media, Design & Libraries
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip" data-skill="Photoshop">Adobe Photoshop <span class="skill-chip-years">11 yrs</span></span>
+              <span class="skill-chip" data-skill="DaVinci">DaVinci Resolve <span class="skill-chip-years">&lt;1 yr</span></span>
+              <span class="skill-chip" data-skill="ImageMagick">ImageMagick</span>
+              <span class="skill-chip" data-skill="PDFBox">Apache PDFBox</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- CRM, Project Management & Communication Tools -->
+        <div class="dual-grid">
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-name">
+                <span>📊</span> CRM, PM &amp; Issue Tracking
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip" data-skill="Jira">Jira</span>
+              <span class="skill-chip" data-skill="HubSpot">HubSpot CRM</span>
+              <span class="skill-chip" data-skill="Salesforce">Salesforce</span>
+              <span class="skill-chip" data-skill="Trello">Trello</span>
+              <span class="skill-chip" data-skill="Asana">Asana</span>
+              <span class="skill-chip" data-skill="ClickUp">ClickUp</span>
+              <span class="skill-chip" data-skill="Notion">Notion</span>
+              <span class="skill-chip" data-skill="Linear">Linear</span>
+              <span class="skill-chip" data-skill="Zendesk">Zendesk</span>
+            </div>
+          </div>
+
+          <div class="skill-category-card">
+            <div class="skill-category-header">
+              <div class="skill-category-name">
+                <span>💬</span> Communication &amp; Team Collaboration
+              </div>
+            </div>
+            <div class="skill-chips">
+              <span class="skill-chip" data-skill="Slack">Slack</span>
+              <span class="skill-chip" data-skill="Microsoft Teams">Microsoft Teams</span>
+              <span class="skill-chip" data-skill="Discord">Discord</span>
+              <span class="skill-chip" data-skill="Zoom">Zoom</span>
+              <span class="skill-chip" data-skill="Google Workspace">Google Workspace</span>
+              <span class="skill-chip" data-skill="Loom">Loom</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Work Experience -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Work Experience
+        </h2>
+      </div>
+
+      <div class="timeline">
+        <!-- 1. CreativeX Tech Labs -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">CreativeX Tech Labs</h3>
+                <div class="job-role">Full Stack Engineer / Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">June 2025 – Present</span>
+                <span class="job-duration">1 year 3 months</span>
+                <span class="job-location">Davao, Philippines</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Active member of the core engineering team responsible for resolving bugs and developing new features for <strong>Value Chain Plus</strong>, a high-complexity multi-tenant Software as a Service (SaaS) application and direct competitor to Jira.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Full-Stack</span>
+              <span class="job-tag">SaaS</span>
+              <span class="job-tag">Multi-tenant</span>
+              <span class="job-tag">Value Chain Plus</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Akamai POS -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Akamai POS</h3>
+                <div class="job-role">Full-stack Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">October 2023 – April 2024</span>
+                <span class="job-duration">7 months</span>
+                <span class="job-location">Honolulu County, Hawaii, United States</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Executed end-to-end development of critical modules for an enterprise Point of Sale (POS) system.</li>
+              <li>Architected and implemented the backend business logic and designed corresponding frontend user interfaces for new features.</li>
+              <li>Successfully delivered key system modules from concept to completion:
+                <ul style="list-style: disc; padding-left: 20px; margin-top: 6px;">
+                  <li><strong>Authentication:</strong> Secure user login, session lifecycle management, and granular role-based access control.</li>
+                  <li><strong>Time Tracking:</strong> Automated system for logging employee shifts, breaks, and monitoring attendance.</li>
+                  <li><strong>Production Reports:</strong> Dynamic reporting engine generating real-time analytics on sales trends and production data.</li>
+                  <li><strong>Item Management:</strong> Full CRUD product catalog with category management and real-time inventory tracking.</li>
+                </ul>
+              </li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">CodeIgniter 3</span>
+              <span class="job-tag">PostgreSQL</span>
+              <span class="job-tag">jQuery</span>
+              <span class="job-tag">Bootstrap 3</span>
+              <span class="job-tag">POS Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Picture Works Australia -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Picture Works Australia</h3>
+                <div class="job-role">Engineer (Integration Lead)</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">May 2021 – September 2023</span>
+                <span class="job-duration">2 years 5 months</span>
+                <span class="job-location">Melbourne, Victoria, Australia</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Served as the primary integration lead and principal point of contact for the company's largest and most strategic client integration.</li>
+              <li>Led the API integration into proprietary software, architecting backend pipelines specifically focused on submitted order processing, automated validation, and status tracking.</li>
+              <li>Performed full-stack development, designing and refining ReactJS user interface components hooked directly into core backend services.</li>
+              <li>Collaborated closely with DevOps on CI/CD pipelines, server deployments, and containerized infrastructure tasks.</li>
+              <li>Acted as the senior escalation authority for troubleshooting, diagnosing, and swiftly resolving complex production bugs and system anomalies.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Laravel</span>
+              <span class="job-tag">ReactJS</span>
+              <span class="job-tag">API Integration</span>
+              <span class="job-tag">Docker</span>
+              <span class="job-tag">PostgreSQL</span>
+              <span class="job-tag">DevOps</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. uBind -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">uBind</h3>
+                <div class="job-role">Product Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">June 2020 – February 2021</span>
+                <span class="job-duration">9 months</span>
+                <span class="job-location">Melbourne, Victoria, Australia</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Utilized Microsoft Excel as an advanced configuration and development tool to design and build dynamic insurance policy application forms.</li>
+              <li>Structured intricate calculation logic, conditional question trees, underwriting rules, and mathematical formulas tailored to client specifications.</li>
+              <li>Engineered intuitive user flows to create frictionless policy quoting and purchasing experiences for insurance end-users.</li>
+              <li>Created comprehensive configuration spreadsheets that compiled automatically into embeddable web forms via uBind's proprietary engine.</li>
+              <li>Delivered guided online insurance application workflows integrated seamlessly into external client websites.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Product Development</span>
+              <span class="job-tag">Dynamic Forms</span>
+              <span class="job-tag">Logic Engineering</span>
+              <span class="job-tag">Excel Architecture</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Crate Club Group -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Crate Club Group</h3>
+                <div class="job-role">Full-stack Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">June 2018 – December 2019</span>
+                <span class="job-duration">1 year 7 months</span>
+                <span class="job-location">New York, United States</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Joined during initial greenfield development prior to product launch, authoring core backend functionalities and scalable REST APIs.</li>
+              <li>Engineered end-to-end commerce features: payment gateways, subscription billing cycles, automated refund processing, and transactional email triggers.</li>
+              <li>Constructed shipment and logistics management workflows, comprehensive automated invoice generation, and revenue reporting dashboards.</li>
+              <li>Implemented server-side Search Engine Optimization (SEO) practices and structured application logging for continuous monitoring.</li>
+              <li>Collaborated directly with UI/frontend engineers and built dedicated API endpoints powering the cross-platform mobile application.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Laravel</span>
+              <span class="job-tag">Laraship</span>
+              <span class="job-tag">ReactJS</span>
+              <span class="job-tag">Tailwind CSS</span>
+              <span class="job-tag">MySQL</span>
+              <span class="job-tag">Payment APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. IdeaHub IT Solutions Provider, Inc. -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">IdeaHub IT Solutions Provider, Inc.</h3>
+                <div class="job-role">Full Stack Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">May 2017 – February 2018</span>
+                <span class="job-duration">10 months</span>
+                <span class="job-location">Davao, Davao Region, Philippines</span>
+              </div>
+            </div>
+
+            <div class="job-subsections">
+              <div class="job-subsection">
+                <div class="job-subsection-title">Client: Pure Incubation (Backend Developer)</div>
+                <ul class="job-bullets">
+                  <li>Assigned to backend development for client-facing software systems.</li>
+                  <li>Worked on a task-by-task basis to maintain, enhance, and deploy server-side features utilizing <strong>CodeIgniter 3</strong>.</li>
+                </ul>
+              </div>
+
+              <div class="job-subsection">
+                <div class="job-subsection-title">Client: Dominoone (Frontend Developer)</div>
+                <ul class="job-bullets">
+                  <li>Translated client-provided UI/UX wireframes into pixel-perfect, responsive web interfaces.</li>
+                  <li>Integrated frontend components seamlessly with existing Laravel backend REST APIs.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job-tags">
+              <span class="job-tag">CodeIgniter 3</span>
+              <span class="job-tag">Laravel</span>
+              <span class="job-tag">UI/UX Implementation</span>
+              <span class="job-tag">Client Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Midtown Printing Corporation, Inc. -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Midtown Printing Corporation, Inc.</h3>
+                <div class="job-role">Programmer / Full Stack Web Developer</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">October 2013 – June 2017</span>
+                <span class="job-duration">3 years 9 months</span>
+                <span class="job-location">Bonifacio Street, Davao City, Philippines</span>
+              </div>
+            </div>
+
+            <div class="job-subsections">
+              <div class="job-subsection">
+                <div class="job-subsection-title">WordPress Development & Theme Architecture</div>
+                <ul class="job-bullets">
+                  <li>Maintained and administered the primary company marketing website on WordPress.</li>
+                  <li>Coded custom WordPress themes and layouts from scratch using clean HTML, CSS, and PHP.</li>
+                  <li>Led three complete site redesigns over a 3-year period to support milestone company celebrations.</li>
+                  <li>Built and launched custom WordPress sites for multiple clients, including Tapa King, Step Asia, and Ansaldo.</li>
+                </ul>
+              </div>
+
+              <div class="job-subsection">
+                <div class="job-subsection-title">Web Application & E-commerce Development</div>
+                <ul class="job-bullets">
+                  <li>Replicated and deployed an independent e-commerce web platform for commercial printing services (business cards, books, brochures).</li>
+                  <li>Engineered the <strong>Student Online Services (SOS)</strong> system to aggregate yearbook student information from partner schools.</li>
+                  <li>Developed custom CodeIgniter 3 web applications for Step-Asia and a comprehensive clinic management application for Aivee Clinic.</li>
+                  <li>Built an automated filing system for organizing Revenue Memorandum Circulars.</li>
+                </ul>
+              </div>
+
+              <div class="job-subsection">
+                <div class="job-subsection-title">Maintenance, Technical Support & Project Architecture</div>
+                <ul class="job-bullets">
+                  <li>Served as maintenance developer fixing bugs, implementing features, and optimizing performance across live client apps.</li>
+                  <li>Handled customer support inquiries for SOS and commercial printing products.</li>
+                  <li>Spearheaded architectural planning for "Virtual Office", an enterprise system built with Laravel to manage company workflows.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="job-tags">
+              <span class="job-tag">PHP</span>
+              <span class="job-tag">WordPress Themes</span>
+              <span class="job-tag">CodeIgniter 3</span>
+              <span class="job-tag">Laravel</span>
+              <span class="job-tag">E-Commerce</span>
+              <span class="job-tag">HTML / CSS</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Caraga State University -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Caraga State University</h3>
+                <div class="job-role">Geographic Information Systems (GIS) Analyst</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">February 2013 – July 2013</span>
+                <span class="job-duration">6 months</span>
+                <span class="job-location">Butuan, Caraga, Philippines</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Progressed from field data collection (gathering land titles and mapping in Butuan City) to digital vectorization using ArcGIS software.</li>
+              <li>Expanded technical scope to web engineering, developing and launching a community organization portal using Drupal.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">GIS</span>
+              <span class="job-tag">ArcGIS</span>
+              <span class="job-tag">Drupal</span>
+              <span class="job-tag">Data Digitization</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. Green Pine Agricultural Development Corporation -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="timeline-content">
+            <div class="job-header">
+              <div>
+                <h3 class="job-company">Green Pine Agricultural Development Corporation</h3>
+                <div class="job-role">Data Encoder / Analyst</div>
+              </div>
+              <div class="job-meta">
+                <span class="job-date">October 2012 – February 2013</span>
+                <span class="job-duration">5 months</span>
+                <span class="job-location">Butuan, Caraga, Philippines</span>
+              </div>
+            </div>
+            <ul class="job-bullets">
+              <li>Encoded, audited, and analyzed poultry supply production metrics for enterprise accounts (Jollibee, McDonald's, and retail shopping malls).</li>
+              <li>Generated weekly and monthly operational reports delivered directly to San Miguel Corporation.</li>
+              <li>Conducted discrepancies analysis ensuring 100% data fidelity and integrity across production logs.</li>
+            </ul>
+            <div class="job-tags">
+              <span class="job-tag">Data Analytics</span>
+              <span class="job-tag">Quality Assurance</span>
+              <span class="job-tag">Enterprise Reporting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Key Projects -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Key Projects
+        </h2>
+      </div>
+
+      <!-- Project Filter Pills -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="laravel">Laravel</button>
+        <button class="filter-btn" data-filter="react">ReactJS</button>
+        <button class="filter-btn" data-filter="codeigniter">CodeIgniter</button>
+        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        <button class="filter-btn" data-filter="postgresql">PostgreSQL</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Process Center -->
+        <div class="project-card" data-tech="laravel react python postgresql docker rsync imagemagick pdfbox microservices">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Process Center</h3>
+              <a href="https://zensmart.ai" target="_blank" rel="noopener noreferrer" class="project-link">
+                zensmart.ai
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <div class="project-role">Lead Developer & Integration Point Person</div>
+            <p class="project-desc">
+              High-throughput middleware microservice transcoding disparate client transaction payloads into legacy specifications. Handles thousands of orders daily and automates bulk image enhancement, rotation, cutting, and prep for print pipelines.
+            </p>
+            <ul class="project-highlights">
+              <li>Integrated largest strategic client end-to-end into production.</li>
+              <li>Built ReactJS UI for manual workflow triggering and supervision.</li>
+              <li>Executed automated image processing with ImageMagick & Apache PDFBox.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">Laravel</span>
+              <span class="project-tech">ReactJS</span>
+              <span class="project-tech">Python</span>
+              <span class="project-tech">Docker</span>
+              <span class="project-tech">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Akamai POS -->
+        <div class="project-card" data-tech="codeigniter postgresql jquery bootstrap pos fullstack">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Akamai POS</h3>
+            </div>
+            <div class="project-role">Full-Stack Developer</div>
+            <p class="project-desc">
+              Comprehensive Point of Sale (POS) system built with CodeIgniter 3, jQuery, and Bootstrap 3, powering retail inventory, employee tracking, and financial reconciliation.
+            </p>
+            <ul class="project-highlights">
+              <li>Architected Authentication, Role-based Access & Time Tracking.</li>
+              <li>Built dynamic sales and production reporting engines.</li>
+              <li>Implemented full CRUD catalog and real-time inventory management.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">CodeIgniter 3</span>
+              <span class="project-tech">PostgreSQL</span>
+              <span class="project-tech">jQuery</span>
+              <span class="project-tech">Bootstrap 3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Crate Club Subscription -->
+        <div class="project-card" data-tech="laravel react tailwind mysql subscription laraship ecommerce">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Crate Club Subscription</h3>
+              <a href="https://crateclub.com" target="_blank" rel="noopener noreferrer" class="project-link">
+                crateclub.com
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <div class="project-role">Core Full-Stack Developer</div>
+            <p class="project-desc">
+              Curated subscription box e-commerce platform delivering tactical and outdoor gear. Developed from greenfield design to high-volume production launch.
+            </p>
+            <ul class="project-highlights">
+              <li>Built payment gateways, automated refunds, and transactional invoicing.</li>
+              <li>Created push notification channels and automated shipment tracking.</li>
+              <li>Engineered mobile REST APIs and responsive ReactJS UI components.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">Laravel</span>
+              <span class="project-tech">ReactJS</span>
+              <span class="project-tech">Tailwind CSS</span>
+              <span class="project-tech">MySQL</span>
+              <span class="project-tech">Laraship</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Midtown Website -->
+        <div class="project-card" data-tech="wordpress bootstrap mysql php html css">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Midtown Corporate Portal</h3>
+              <a href="https://midtown.com.ph" target="_blank" rel="noopener noreferrer" class="project-link">
+                midtown.com.ph
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <div class="project-role">Lead Designer & Theme Developer</div>
+            <p class="project-desc">
+              Primary marketing and commercial website for Midtown Printing Corporation, showcasing corporate printing services and customer quote ordering.
+            </p>
+            <ul class="project-highlights">
+              <li>Coded bespoke, high-performance WordPress theme using clean HTML/CSS/PHP.</li>
+              <li>Led continuous UI modernizations, performance audits, and SEO structure.</li>
+              <li>Provided tier-1 technical operations and online customer support.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">WordPress</span>
+              <span class="project-tech">PHP</span>
+              <span class="project-tech">Bootstrap</span>
+              <span class="project-tech">MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Student Online Services (SOS) -->
+        <div class="project-card" data-tech="codeigniter bootstrap mysql email school">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Student Online Services (SOS)</h3>
+              <a href="https://sos.midtown.com.ph" target="_blank" rel="noopener noreferrer" class="project-link">
+                sos.midtown.com.ph
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+              </a>
+            </div>
+            <div class="project-role">Contributor & Full-Stack Developer</div>
+            <p class="project-desc">
+              High-volume educational data collection portal used across partner universities and colleges to verify student records for official yearbook publication.
+            </p>
+            <ul class="project-highlights">
+              <li>Modernized styling from Bootstrap 2 to responsive Bootstrap 3.</li>
+              <li>Implemented institutional student segregation and email confirmation workflows.</li>
+              <li>Handled tier-2 user issue escalation and documentation.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">CodeIgniter 3</span>
+              <span class="project-tech">MySQL</span>
+              <span class="project-tech">Bootstrap 3</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Revenue Memorandum Circulars -->
+        <div class="project-card" data-tech="codeigniter mysql bootstrap csv documents">
+          <div>
+            <div class="project-header">
+              <h3 class="project-title">Revenue Memorandum Circulars</h3>
+            </div>
+            <div class="project-role">Core Full-Stack Developer</div>
+            <p class="project-desc">
+              Automated fiscal document management system designed to ingest, categorize, and cross-reference government tax memorandums from uploaded CSV datasets.
+            </p>
+            <ul class="project-highlights">
+              <li>Built from scratch through to deployment with CodeIgniter 3 and MySQL.</li>
+              <li>Engineered bulk CSV parser segregating documents by metadata tags.</li>
+              <li>Implemented audit trails, collaborative annotations, and export tools.</li>
+            </ul>
+          </div>
+          <div class="project-footer">
+            <div class="project-techs">
+              <span class="project-tech">CodeIgniter 3</span>
+              <span class="project-tech">MySQL</span>
+              <span class="project-tech">Bootstrap 3</span>
+              <span class="project-tech">CSV ETL</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Education, Certifications & Publications -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          Education & Credentials
+        </h2>
+      </div>
+
+      <div class="dual-grid">
+        <!-- Education Card -->
+        <div class="info-card">
+          <h3 class="info-card-title">
+            <span>🎓</span> Academic Degree
+          </h3>
+          <div class="edu-degree">Bachelor of Science in Computer Science</div>
+          <div class="edu-school">Caraga State University</div>
+          <div class="edu-meta">
+            June 2006 – March 29, 2012 &bull; Butuan City, Philippines<br>
+            <span style="font-size: 0.8rem; color: var(--text-muted);">📍 Campus: National Road, Barangay Ampayon, Butuan City, Philippines</span>
+          </div>
+          <div class="edu-details">
+            <div style="margin-bottom: 10px;">
+              <span style="font-weight: 700; font-size: 0.85rem; color: var(--text-heading);">Thesis:</span>
+              <span style="font-style: italic; color: var(--accent-light); font-size: 0.85rem;"> A Ten (10) Peso Attribute Classifier for Coin Detection</span>
+            </div>
+            <div style="margin-bottom: 12px;">
+              <span style="font-weight: 700; font-size: 0.85rem; color: var(--text-heading); display: block; margin-bottom: 4px;">Leadership & Affiliations:</span>
+              <ul style="list-style: disc; padding-left: 18px; font-size: 0.83rem; color: var(--text-secondary);">
+                <li>Project Director &ndash; Junior Philippine Computer Society (JPCS)</li>
+                <li>Vice President &ndash; Computer Science Society (CSS)</li>
+              </ul>
+            </div>
+            <p style="margin-bottom: 8px; font-weight: 700; font-size: 0.85rem; color: var(--text-heading);">
+              Core Curriculum & Subject Areas:
+            </p>
+            <div class="skill-chips" style="gap: 6px;">
+              <span class="project-tech">Software Engineering</span>
+              <span class="project-tech">Algorithms & Data Structures</span>
+              <span class="project-tech">Operating Systems</span>
+              <span class="project-tech">Computer Networks</span>
+              <span class="project-tech">Databases</span>
+              <span class="project-tech">Artificial Intelligence</span>
+              <span class="project-tech">Machine Learning</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Publications Card -->
+        <div class="info-card">
+          <h3 class="info-card-title">
+            <span>📜</span> Certifications & Publications
+          </h3>
+          <ul class="cert-list">
+            <li class="cert-item">
+              <span class="cert-icon">🎖️</span>
+              <div>
+                <strong>Principle of Design for Developers</strong>
+              </div>
+            </li>
+            <li class="cert-item">
+              <span class="cert-icon">🎖️</span>
+              <div>
+                <strong>Project Management for Freelance Developers</strong>
+              </div>
+            </li>
+            <li class="cert-item">
+              <span class="cert-icon">🎖️</span>
+              <div>
+                <strong>Laravel 5 Certification</strong>
+              </div>
+            </li>
+            <li class="cert-item">
+              <span class="cert-icon">🎖️</span>
+              <div>
+                <strong>Elm: A Beginners' Guide to Elm and Data</strong>
+              </div>
+            </li>
+            <li class="cert-item">
+              <span class="cert-icon">🎖️</span>
+              <div>
+                <strong>Animating with CSS</strong>
+              </div>
+            </li>
+            <li class="cert-item" style="border-left: 3px solid var(--accent);">
+              <span class="cert-icon">📖</span>
+              <div>
+                <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--accent-light); font-weight: 700; display: block;">Publication</span>
+                <strong>A 10 Peso Attribute Classifier For Coin Detection</strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: References -->
+    <section id="references" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Professional References
+        </h2>
+      </div>
+
+      <div class="dual-grid">
+        <div class="ref-card">
+          <div class="ref-name">Samuel Brent</div>
+          <div class="ref-title">Director and CID &bull; Picture Works Group Ltd</div>
+          <a href="mailto:samuel.brent@pictureworks.com.au" class="ref-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            samuel.brent@pictureworks.com.au
+          </a>
+        </div>
+
+        <div class="ref-card">
+          <div class="ref-name">Ms. Xysa Rhea Bitonga</div>
+          <div class="ref-title">Project Manager and QA &bull; Crate Club Group Inc</div>
+          <a href="https://facebook.com/msxysarhea" target="_blank" rel="noopener noreferrer" class="ref-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            facebook.com/msxysarhea
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Fil Joseph Elman &bull; Technical Lead &amp; Full-Stack Developer</p>
+      <p style="margin-top: 6px; font-size: 0.8rem;">
+        Designed &amp; engineered for performance, precision, and readability.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal for Raw Markdown -->
+  <div id="modal-markdown" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Raw Resume Markdown (resume.md)</h3>
+        <button id="btn-close-modal" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="markdown-raw-content"># Fil Joseph Elman
+
+**Technical Lead | Full-Stack Developer | API Integration | PHP | Python | IoT | Artificial Intelligence**  
+📍 Davao, Davao Region, Philippines
+
+---
+
+### Contact Information
+
+- **Address:** Lot 32, Block 8, Fori St, Navonna Subd., Davao City, Philippines
+- **Phone / Mobile:** [+63 912 491 8787](tel:+639124918787)
+- **Email:** [filjoseph22@gmail.com](mailto:filjoseph22@gmail.com)
+- **LinkedIn:** [linkedin.com/in/filjoseph](https://www.linkedin.com/in/filjoseph)
+- **Portfolio / Website:** [filjoseph1989.github.io](https://filjoseph1989.github.io)
+
+---
+
+## Professional Summary
+
+My journey in software development has been driven by a relentless curiosity and a passion for turning ideas into reality. What started as a Computer Science degree quickly grew into a multifaceted career, beginning with roles in data analysis and GIS, where I learned the importance of precision and structure. This foundation paved the way for my transition into full-stack development.
+
+I have spent years honing my skills, building a deep expertise in PHP frameworks like Laravel and CodeIgniter, as well as content management systems like WordPress and Drupal. I've had the privilege of developing a wide array of solutions, including e-commerce platforms, custom client websites, and critical modules for Point of Sale (POS) systems covering everything from authentication to item management.
+
+Now, as a Technical Lead, I apply this broad experience to guide complex projects, most notably leading the successful API integration of a major client. I am just as comfortable architecting a backend system as I am implementing a UI, assisting with DevOps, or resolving a critical production issue.
+
+### Key Areas of Expertise
+- **Full-Stack Development:** End-to-end creation of web applications and services.
+- **API Integration:** Connecting disparate systems to create seamless workflows.
+- **Backend Systems:** Building the core logic for POS, e-commerce, and business applications.
+- **Versatile Technologies:** Proficient across PHP (Laravel, CodeIgniter), WordPress, Drupal, GIS, and more.
+- **Problem Solving:** A proven ability to diagnose issues and deliver effective solutions.
+
+*I am always looking for new challenges and opportunities to learn. Let's connect!*
+
+---
+
+## Skills & Qualifications
+
+### Tech Stack & Experience
+- **Backend & Languages:** PHP (11 yrs), JavaScript (11 yrs), Node.js (6 yrs), Python (1 yr), Java, TypeScript (<1 yr), Express.js (<1 yr)
+- **Frontend & Frameworks:** HTML (11 yrs), CSS (11 yrs), ReactJS (3 yrs), Tailwind CSS (3 yrs), Bootstrap, jQuery, Next.js, Nuxt.js, Svelte (<1 yr), Remix (<1 yr)
+- **Frameworks, CMS & Starter Kits:** Laravel, CodeIgniter, WordPress, Drupal, Laraship
+- **Databases & Infrastructure:** MySQL (7 yrs), PostgreSQL (3 yrs), Git (11 yrs), Ubuntu / Linux (11 yrs), Apache (11 yrs), Docker, Rsync
+- **CRM & Project Management:** Jira, HubSpot, Salesforce, Trello, Asana, ClickUp, Notion, Linear, Zendesk
+- **Communication & Team Collaboration:** Slack, Microsoft Teams, Discord, Zoom, Google Workspace, Loom
+- **Libraries, Media & Design:** ImageMagick, Apache PDFBox, Adobe Photoshop (11 yrs), DaVinci Resolve (<1 yr)
+- **Specializations:** Artificial Intelligence (AI), API Integration, IoT, GIS (ArcGIS)
+
+### Languages
+- Tagalog
+- English
+
+### Certifications
+- **Principle of Design for Developers**
+- **Project Management for Freelance Developers**
+- **Laravel 5**
+- **Elm: A Beginners' Guide to Elm and Data**
+- **Animating with CSS**
+
+### Publications
+- **A 10 Peso Attribute Classifier For Coin Detection**
+
+---
+
+## Work Experience
+
+### **CreativeX Tech Labs**
+**Full Stack Engineer** | Davao, Philippines  
+*June 2025 – Present (1 year 3 months)*
+
+**Role:** Full Stack Developer  
+- Part of the team responsible for resolving bugs and adding new features to the Software as a Service (SaaS), multi-tenant application called **Value Chain Plus** (a Jira competitor).
+
+---
+
+### **Akamai POS**
+**Full-stack Developer** | Honolulu County, Hawaii, United States  
+*October 2023 – April 2024 (7 months)*
+
+- Performed end-to-end development of critical modules for a comprehensive Point of Sale (POS) system.
+- Responsible for architecting and implementing the backend business logic for new features.
+- Designed and developed the corresponding frontend pages and user interfaces for each new module.
+- Successfully delivered several key system modules from concept to completion, including:
+  - **Authentication:** Secure user login, session management, and role-based access control.
+  - **Time Tracking:** System for logging employee hours and monitoring attendance.
+  - **Production Reports:** Tools for generating dynamic reports on sales and production data.
+  - **Item Management:** Full CRUD (Create, Read, Update, Delete) functionality for the product catalog and inventory.
+
+---
+
+### **Picture Works Australia**
+**Engineer (Integration Lead)** | Melbourne, Victoria, Australia  
+*May 2021 – September 2023 (2 years 5 months)*
+
+- Served as the primary integration lead and point of contact for a high-priority, strategic client integration.
+- Responsible for leading the API integration of the company's largest client into our proprietary software.
+- Architected and developed complex backend functionalities, specifically focusing on submitted order processing and management.
+- Performed full-stack development by building and modifying user interface (UI) components related to core backend features.
+- Provided support to the DevOps team with deployment processes and infrastructure tasks.
+- Acted as a key escalation point for troubleshooting, diagnosing, and resolving complex technical support issues.
+
+---
+
+### **uBind**
+**Product Developer** | Melbourne, Victoria, Australia  
+*June 2020 – February 2021 (9 months)*
+
+- Utilized Microsoft Excel as a primary development tool to design and configure dynamic insurance policy application forms.
+- Responsible for structuring complex logic, including defining questions, formulas, and conditional steps based on specific project requirements.
+- Engineered the logical flow of questions to create an intelligent and intuitive user experience for customers purchasing insurance policies.
+- Created detailed spreadsheets that served as configuration files for a proprietary platform, which automatically generated embeddable web forms.
+- Developed guided online application processes for integration into client websites, effectively assisting customers in their policy purchasing journey.
+
+---
+
+### **Crate Club Group**
+**Full-stack Developer** | New York, United States  
+*June 2018 – December 2019 (1 year 7 months)*
+
+- Joined the project during its initial development phase, prior to its first deployment to production.
+- Primarily responsible for developing core backend functionalities and building robust APIs.
+- Contributed significantly to the implementation of critical, end-to-end business features, including:
+  - Payment gateways and refund processing systems.
+  - Automated invoicing and transactional email services.
+  - Shipment and logistics management features.
+  - Backend implementation for Search Engine Optimization (SEO).
+  - System logging and performance monitoring.
+  - Generation of comprehensive revenue reports.
+- Collaborated with the UI developer by assisting with minor user interface adjustments as needed.
+- Collaborated with the mobile developer by providing API endpoints and defining interaction logic.
+
+---
+
+### **IdeaHub IT Solutions Provider, Inc.**
+**Full Stack Developer** | Davao, Davao Region, Philippines  
+*May 2017 – February 2018 (10 months)*
+
+#### Client: Pure Incubation *(Backend Developer)*
+- Assigned to a backend development role for an existing client system.
+- Worked on a task-by-task basis to implement, enhance, and maintain backend functionalities.
+- Utilized the CodeIgniter 3 framework to develop and deploy server-side solutions.
+
+#### Client: Dominoone *(Frontend Developer)*
+- Transitioned to a new project in a frontend development capacity after the previous contract ended.
+- Responsible for translating client-provided UI/UX designs into responsive and functional web interfaces.
+- Implemented frontend components to integrate seamlessly with the existing Laravel backend.
+
+---
+
+### **Midtown Printing Corporation, Inc.**
+**Programmer / Full Stack Web Developer** | Bonifacio Street, Davao City, Philippines  
+*October 2013 – June 2017 (3 years 9 months)*
+
+#### WordPress Development & Management
+- Maintained and administered the company's primary marketing website built on WordPress.
+- Authored custom WordPress themes and layouts using HTML, CSS, and PHP.
+- Successfully executed three complete website redesigns over a three-year period to align with company anniversary celebrations.
+- Developed and launched several WordPress websites from scratch for various clients, including Tapa King, Step Asia, and Ansaldo.
+
+#### Web Application & E-commerce Development
+- Replicated a full-featured e-commerce website offering printing services (business cards, book printing, brochures, etc.), allowing the company to host and own the platform independently.
+- Developed web applications using the CodeIgniter framework, including custom development for Step-Asia and a clinic management application for Aivee Clinic.
+- Contributed to the development of the "Student Online Services" (SOS) system designed to collect student information for yearbook printing.
+- Built a system to organize Revenue Memorandum Circulars for efficient document management.
+
+#### Maintenance, Technical Support & Operations
+- Served as a maintenance full-stack developer across websites and web applications—fixing bugs, implementing new features, and improving performance.
+- Supported customer online inquiries for Student Online Services (SOS), troubleshooting website/application issues for end users.
+- Handled technical and customer support inquiries for Midtown across a range of products and services.
+
+#### Project Planning & Architecture
+- Actively involved in the planning phase for a new, large-scale project called "Virtual Office."
+- Planned the project using the Laravel framework as an end-to-end system to manage all employee activities and operational tasks from login to logout.
+
+---
+
+### **Caraga State University**
+**Geographic Information Systems Analyst** | Butuan, Caraga, Philippines  
+*February 2013 – July 2013 (6 months)*
+
+- Performed in a multi-faceted role with progressively increasing technical responsibilities.
+- Initially assigned to data collection, involving gathering and photographing land titles and land maps in Butuan City for a GIS digitization project.
+- Promoted to a technical team responsible for converting map images into digital vector data using ArcGIS software.
+- Later tasked with web development, successfully building and launching a website for an organization using the Drupal framework.
+
+---
+
+### **Green Pine Agricultural Development Corporation**
+**Data Encoder / Analyst** | Butuan, Caraga, Philippines  
+*October 2012 – February 2013 (5 months)*
+
+- Encoded and managed data generated from the production process of a poultry supplier for major clients like Jollibee, McDonald's, and retail malls.
+- Analyzed production data to create comprehensive reports.
+- Prepared and submitted various weekly and monthly reports to key stakeholders, including San Miguel Corporation.
+- Conducted investigative analyses to identify and resolve discrepancies in reports.
+- Ensured the accuracy and integrity of all production-related data.
+
+---
+
+## Key Projects
+
+*Selected key projects with major engineering and architecture contributions:*
+
+### **Process Center**
+**Role:** Lead Developer & Integration Point Person | **Live:** [zensmart.ai](https://zensmart.ai)  
+**Technologies:** Laravel, ImageMagick, Apache PDFBox, Java, Python, Rsync, Docker, PostgreSQL, ReactJS
+
+- **Overview:** An independent enterprise service built with Laravel acting as a middleware and transaction proxy between external client systems and the internal platform. Built to dynamically transcode incoming client payloads into the legacy payload format and serve as the centralized entry point for high-volume transactions.
+- **Scale & Architecture:** Handles thousands of orders on a daily basis; automatically fetches hundreds of images from various sources per payload, performing automated enhancements, grouping, cutting, rotation, and print-preparation operations.
+- **Responsibilities & Impact:**
+  - Led the end-to-end integration of the company's largest strategic client through Process Center, taking the service from requirements to production deployment.
+  - Developed user-facing control interfaces with ReactJS to allow operational management and workflow triggering.
+  - Provided rapid diagnosis and remediation for critical production escalations.
+
+---
+
+### **Akamai POS**
+**Role:** Full-Stack Developer  
+**Technologies:** CodeIgniter 3, PostgreSQL, jQuery, Bootstrap 3
+
+- **Overview:** Comprehensive Point of Sale (POS) system built on CodeIgniter 3 with jQuery and Bootstrap 3 driving interactive UI behavior.
+- **Responsibilities & Impact:**
+  - Resolved legacy issues and engineered new core modules end-to-end (Authentication, Time Tracking, Dynamic Production Reports, and CRUD Item Management).
+  - Modernized user interface components and significantly optimized server-side logic and database queries.
+
+---
+
+### **Crate Club Subscription**
+**Role:** Core Full-Stack Developer | **Live:** [crateclub.com](https://crateclub.com)  
+**Technologies:** Laravel, Laraship, ReactJS, Tailwind CSS, MySQL
+
+- **Overview:** High-volume e-commerce subscription service delivering curated tactical and outdoor gear packages directly to subscribers nationwide.
+- **Responsibilities & Impact:**
+  - Co-architected and developed the platform from inception to production deployment.
+  - Built core business infrastructure: payment gateways, refund processing, automated invoicing, push notifications, and transactional emails.
+  - Implemented shipment and logistics management, SEO enhancements, financial reporting, and REST API endpoints powering the mobile application.
+
+---
+
+### **Midtown Website**
+**Role:** Lead Designer & Theme Developer | **Live:** [midtown.com.ph](https://midtown.com.ph)  
+**Technologies:** WordPress, Bootstrap, MySQL, HTML, CSS, PHP
+
+- **Overview:** Official corporate marketing and lead-generation portal for Midtown Printing.
+- **Responsibilities & Impact:**
+  - Designed and coded custom, responsive WordPress themes and templates from scratch.
+  - Maintained site health, performance optimizations, and continuous technical support.
+
+---
+
+### **Student Online Services (SOS)**
+**Role:** Contributor & Full-Stack Developer | **Live:** [sos.midtown.com.ph](https://sos.midtown.com.ph)  
+**Technologies:** CodeIgniter 3, MySQL, Bootstrap 2 / 3
+
+- **Overview:** Centralized school portal used by Midtown Printing to collect, validate, and organize student information across partner institutions for yearbook publishing.
+- **Responsibilities & Impact:**
+  - Upgraded front-end styling architecture from Bootstrap 2 to Bootstrap 3.
+  - Engineered school-level data segregation, automated email notifications, and data verification features.
+  - Expanded technical documentation and resolved critical bug reports.
+
+---
+
+### **Revenue Memorandum Circulars**
+**Role:** Core Full-Stack Developer  
+**Technologies:** CodeIgniter 3, MySQL, Bootstrap 3
+
+- **Overview:** Automated regulatory and fiscal document tracking system for processing and categorizing tax memorandum circulars.
+- **Responsibilities & Impact:**
+  - Built the application from scratch through to deployment.
+  - Engineered bulk CSV ingestion that parses and automatically segregates related documents by metadata.
+  - Implemented secure user authentication, comments system, import/export capabilities, and summary reporting.
+
+---
+
+## Education
+
+### **Caraga State University**
+**Bachelor of Science in Computer Science** | Butuan City, Philippines  
+*June 2006 – March 29, 2012*  
+📍 **Campus Address:** National Road, Barangay Ampayon, Butuan City, Philippines
+
+- **Thesis:** *A Ten (10) Peso Attribute Classifier for Coin Detection* (Machine Learning / Computer Vision)
+- **Leadership & Campus Affiliations:**
+  - **Project Director** – Junior Philippine Computer Society (JPCS)
+  - **Vice President** – Computer Science Society (CSS)
+- **Core Focus & Coursework:** Programming and Software Development, Algorithms and Data Structures, Computer Organization and Architecture, Operating Systems, Computer Networks, Databases, Artificial Intelligence, and Machine Learning.
+- Developed a solid theoretical and practical engineering foundation through comprehensive coursework, academic projects, and practical computing applications.
+
+---
+
+## References
+
+### **Samuel Brent**
+**Director and CID** | Picture Works Group Ltd  
+✉️ [samuel.brent@pictureworks.com.au](mailto:samuel.brent@pictureworks.com.au)
+
+### **Ms. Xysa Rhea Bitonga**
+**Project Manager and QA** | Crate Club Group Inc  
+🔗 [facebook.com/msxysarhea](https://www.facebook.com/msxysarhea)</pre>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-copy-markdown" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Markdown</span>
+        </button>
+      </div>
+    </div>
+  <!-- Dynamic Resume Data Manager Modal -->
+  <div id="modal-admin" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="admin-modal-title">
+    <div class="modal-content modal-admin">
+      <div class="modal-header">
+        <h3 id="admin-modal-title" class="modal-title" style="display:flex;align-items:center;gap:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+          <span>Resume Data Manager (PostgreSQL: resume_db)</span>
+        </h3>
+        <button id="btn-close-admin" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+
+      <!-- Tabs -->
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="tab-profile">👤 Profile & Summary</button>
+        <button class="admin-tab" data-tab="tab-experiences">💼 Experience</button>
+        <button class="admin-tab" data-tab="tab-projects">🚀 Projects</button>
+        <button class="admin-tab" data-tab="tab-skills">⚡ Skills</button>
+        <button class="admin-tab" data-tab="tab-db">⚙️ Database</button>
+      </div>
+
+      <!-- Panel: Profile & Summary -->
+      <div id="tab-profile" class="admin-panel active">
+        <form id="form-admin-profile">
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label class="admin-label">Full Name</label>
+              <input type="text" id="admin-p-name" class="admin-input" required>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Initials</label>
+              <input type="text" id="admin-p-initials" class="admin-input">
+            </div>
+          </div>
+          <div class="admin-form-group">
+            <label class="admin-label">Tagline / Professional Title</label>
+            <input type="text" id="admin-p-tagline" class="admin-input" required>
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label class="admin-label">Location</label>
+              <input type="text" id="admin-p-location" class="admin-input" required>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Phone</label>
+              <input type="text" id="admin-p-phone" class="admin-input">
+            </div>
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label class="admin-label">Email</label>
+              <input type="email" id="admin-p-email" class="admin-input" required>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">LinkedIn URL</label>
+              <input type="text" id="admin-p-linkedin" class="admin-input">
+            </div>
+          </div>
+          <div class="admin-grid-2">
+            <div class="admin-form-group">
+              <label class="admin-label">Website / Portfolio</label>
+              <input type="text" id="admin-p-website" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Status Banner Text</label>
+              <input type="text" id="admin-p-status" class="admin-input">
+            </div>
+          </div>
+          <div class="admin-form-group">
+            <label class="admin-label">Address</label>
+            <input type="text" id="admin-p-address" class="admin-input">
+          </div>
+          <div class="admin-form-group">
+            <label class="admin-label">Professional Summary (Paragraphs separated by double line break)</label>
+            <textarea id="admin-p-summary" class="admin-textarea" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top:10px;">Save Profile to Database</button>
+        </form>
+      </div>
+
+      <!-- Panel: Experience -->
+      <div id="tab-experiences" class="admin-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <h4 style="color:var(--text-heading); font-size:1rem; margin:0;">Manage Work Experience</h4>
+          <button id="btn-add-experience-modal" class="btn btn-secondary btn-sm">+ Add Experience</button>
+        </div>
+
+        <!-- Experience Edit/Add Form -->
+        <div id="admin-exp-form-container" style="display:none; background:var(--bg-surface); border:1px solid var(--border-accent); border-radius:var(--radius-md); padding:16px; margin-bottom:16px;">
+          <h4 id="admin-exp-form-title" style="margin-top:0; color:var(--accent-light);">Add New Experience</h4>
+          <form id="form-admin-experience">
+            <input type="hidden" id="admin-exp-id">
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-label">Company</label>
+                <input type="text" id="admin-exp-company" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Role</label>
+                <input type="text" id="admin-exp-role" class="admin-input" required>
+              </div>
+            </div>
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-label">Location</label>
+                <input type="text" id="admin-exp-location" class="admin-input">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Duration / Dates (e.g. "May 2021 – Sep 2023")</label>
+                <input type="text" id="admin-exp-duration" class="admin-input" required>
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Short Description</label>
+              <input type="text" id="admin-exp-desc" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Key Achievements / Highlights (One per line)</label>
+              <textarea id="admin-exp-achievements" class="admin-textarea" rows="3"></textarea>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Technologies (comma-separated)</label>
+              <input type="text" id="admin-exp-technologies" class="admin-input" placeholder="e.g. Laravel, ReactJS, PostgreSQL, Docker">
+            </div>
+            <div style="display:flex; gap:10px; margin-top:10px;">
+              <button type="submit" class="btn btn-primary btn-sm">Save Experience</button>
+              <button type="button" id="btn-cancel-exp" class="btn btn-secondary btn-sm">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="admin-experiences-list" class="admin-card-list"></div>
+      </div>
+
+      <!-- Panel: Projects -->
+      <div id="tab-projects" class="admin-panel">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <h4 style="color:var(--text-heading); font-size:1rem; margin:0;">Manage Projects</h4>
+          <button id="btn-add-project-modal" class="btn btn-secondary btn-sm">+ Add Project</button>
+        </div>
+
+        <!-- Project Edit/Add Form -->
+        <div id="admin-proj-form-container" style="display:none; background:var(--bg-surface); border:1px solid var(--border-accent); border-radius:var(--radius-md); padding:16px; margin-bottom:16px;">
+          <h4 id="admin-proj-form-title" style="margin-top:0; color:var(--accent-light);">Add New Project</h4>
+          <form id="form-admin-project">
+            <input type="hidden" id="admin-proj-id">
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-label">Project Title</label>
+                <input type="text" id="admin-proj-title" class="admin-input" required>
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Role</label>
+                <input type="text" id="admin-proj-role" class="admin-input" required>
+              </div>
+            </div>
+            <div class="admin-grid-2">
+              <div class="admin-form-group">
+                <label class="admin-label">Category</label>
+                <input type="text" id="admin-proj-category" class="admin-input" placeholder="e.g. Integration & Cloud, Enterprise Software">
+              </div>
+              <div class="admin-form-group">
+                <label class="admin-label">Live URL (optional)</label>
+                <input type="text" id="admin-proj-live-url" class="admin-input" placeholder="https://...">
+              </div>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Overview</label>
+              <textarea id="admin-proj-overview" class="admin-textarea" rows="2" required></textarea>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Scale & Architecture</label>
+              <input type="text" id="admin-proj-scale" class="admin-input">
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Responsibilities / Bullet Points (One per line)</label>
+              <textarea id="admin-proj-responsibilities" class="admin-textarea" rows="3"></textarea>
+            </div>
+            <div class="admin-form-group">
+              <label class="admin-label">Technologies (comma-separated)</label>
+              <input type="text" id="admin-proj-technologies" class="admin-input" placeholder="e.g. Laravel, ReactJS, Docker, PostgreSQL">
+            </div>
+            <div style="display:flex; gap:10px; margin-top:10px;">
+              <button type="submit" class="btn btn-primary btn-sm">Save Project</button>
+              <button type="button" id="btn-cancel-proj" class="btn btn-secondary btn-sm">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="admin-projects-list" class="admin-card-list"></div>
+      </div>
+
+      <!-- Panel: Skills -->
+      <div id="tab-skills" class="admin-panel">
+        <h4 style="color:var(--text-heading); font-size:1rem; margin-bottom:14px;">Add New Skill</h4>
+        <form id="form-admin-skill" style="display:flex; flex-wrap:wrap; gap:10px; align-items:flex-end; margin-bottom:20px; background:var(--bg-surface); padding:16px; border-radius:var(--radius-md); border:1px solid var(--border-subtle);">
+          <div style="flex:1; min-width:180px;">
+            <label class="admin-label">Category</label>
+            <select id="admin-skill-category-select" class="admin-select" required></select>
+          </div>
+          <div style="flex:1; min-width:180px;">
+            <label class="admin-label">Skill Name</label>
+            <input type="text" id="admin-skill-name" class="admin-input" placeholder="e.g. GraphQL, Next.js" required>
+          </div>
+          <div style="width:140px;">
+            <label class="admin-label">Years (Optional)</label>
+            <input type="text" id="admin-skill-years" class="admin-input" placeholder="e.g. 2 yrs">
+          </div>
+          <button type="submit" class="btn btn-primary btn-sm" style="height:42px;">+ Add Skill</button>
+        </form>
+
+        <h4 style="color:var(--text-heading); font-size:1rem; margin-bottom:12px;">Existing Skills (Click &times; to delete)</h4>
+        <div id="admin-skills-grouped-list"></div>
+      </div>
+
+      <!-- Panel: Database & Tools -->
+      <div id="tab-db" class="admin-panel">
+        <div class="admin-db-status">
+          <div>
+            <h4 style="margin:0 0 6px 0; color:var(--text-heading);">PostgreSQL Database Status</h4>
+            <p style="margin:0; font-size:0.85rem; color:var(--text-secondary);">
+              Database: <code style="color:var(--accent-light);">resume_db</code> &bull; Host: <code>localhost:5432</code> &bull; Schema: <code>public</code>
+            </p>
+          </div>
+          <span class="admin-db-pill">
+            <span class="admin-pill-dot"></span>
+            Connected & Live
+          </span>
+        </div>
+
+        <div style="background:var(--bg-card); border:1px solid var(--border-card); border-radius:var(--radius-md); padding:18px; margin-bottom:16px;">
+          <h4 style="margin-top:0; color:var(--text-heading);">REST API Endpoints</h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:10px;">
+            The resume data is exposed via RESTful endpoints powered by Express and node-postgres:
+          </p>
+          <ul style="font-size:0.85rem; line-height:1.8; color:var(--text-primary); font-family:var(--font-mono);">
+            <li><a href="/api/resume" target="_blank" style="color:var(--accent-light);">GET /api/resume</a> &mdash; Full aggregated JSON payload</li>
+            <li><a href="/api/profile" target="_blank" style="color:var(--accent-light);">GET /api/profile</a> &mdash; Profile & Summary</li>
+            <li><a href="/api/experiences" target="_blank" style="color:var(--accent-light);">GET /api/experiences</a> &mdash; Work history</li>
+            <li><a href="/api/projects" target="_blank" style="color:var(--accent-light);">GET /api/projects</a> &mdash; Projects & portfolio</li>
+            <li><a href="/api/categories" target="_blank" style="color:var(--accent-light);">GET /api/categories</a> &mdash; Skill categories</li>
+            <li><a href="/health" target="_blank" style="color:var(--accent-light);">GET /health</a> &mdash; Server & DB health check</li>
+          </ul>
+        </div>
+
+        <div style="background:rgba(239, 68, 68, 0.08); border:1px solid rgba(239, 68, 68, 0.25); border-radius:var(--radius-md); padding:18px;">
+          <h4 style="margin-top:0; color:#ef4444;">Reset / Re-Seed Database</h4>
+          <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:12px;">
+            Reset all tables in <code>resume_db</code> back to the original baseline data from <code>resume.md</code>.
+          </p>
+          <button id="btn-reset-seed" class="btn btn-danger btn-sm">Reset to Default Resume Seed</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-close-admin-footer" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
