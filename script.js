@@ -264,7 +264,8 @@ function renderResume(data) {
                       <line x1="8" y1="2" x2="8" y2="6"></line>
                       <line x1="3" y1="10" x2="21" y2="10"></line>
                     </svg>
-                    <span>${escapeHtml(exp.duration || (exp.start_date + ' – ' + (exp.end_date || 'Present')))}</span>
+                    <span>${escapeHtml(exp.start_date ? (exp.start_date + ' – ' + (exp.end_date || 'Present')) : (exp.duration || ''))}</span>
+                    ${exp.duration && exp.start_date ? `<span style="opacity:0.85; margin-left:6px; font-size:0.82rem;">(${escapeHtml(exp.duration)})</span>` : ''}
                   </div>
                   ${exp.location ? `
                   <div class="job-location">
@@ -900,11 +901,11 @@ function populateAdminPanels(data) {
       <div class="admin-card-row" data-id="${exp.id}">
         <div class="admin-card-info">
           <h4>${escapeHtml(exp.role)} &bull; <span style="color:var(--accent-light);">${escapeHtml(exp.company)}</span></h4>
-          <p>${escapeHtml(exp.duration || '')} &bull; ${escapeHtml(exp.location || '')}</p>
+          <p>${escapeHtml(exp.start_date ? (exp.start_date + ' – ' + (exp.end_date || 'Present')) : '')} ${exp.duration ? `(${escapeHtml(exp.duration)})` : ''} &bull; ${escapeHtml(exp.location || '')}</p>
         </div>
         <div class="admin-card-actions">
-          <button class="btn btn-secondary btn-sm" onclick="editExperience(${exp.id})">Edit</button>
-          <button class="btn btn-danger btn-sm" onclick="deleteExperience(${exp.id})">Delete</button>
+          <button type="button" class="btn btn-secondary btn-sm" onclick="editExperience(${exp.id})">Edit</button>
+          <button type="button" class="btn btn-danger btn-sm" onclick="deleteExperience(${exp.id})">Delete</button>
         </div>
       </div>
     `).join('');

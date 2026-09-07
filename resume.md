@@ -174,6 +174,22 @@ Now, as a Technical Lead, I apply this broad experience to guide complex project
 
 ---
 
+### **Philam Life**
+**Financial Advisor** | Davao, Philippines  
+*October 2013 – March 2014 (6 months)*
+
+- **Industry / Specialization:** Banking / Financial Services
+- **Role:** Financial Planning / Wealth Management
+- **Position Level:** 1-4 Years Experienced Employee
+- **Overview:** Provided financial solutions and assisted personal financial management using services offered by Philam Life.
+- **Key Services & Focus Areas:**
+  - **Family Secure:** A breadwinner financial life and retirement plan.
+  - **Education:** Structured planning for child's future education fund.
+  - **Investments:** Wealth accumulation, financial diversification, and portfolio advisory.
+- **Skills:** Marketing, Public Relations, Financial Planning, Wealth Management
+
+---
+
 ### **Caraga State University**
 **Geographic Information Systems Analyst** | Butuan, Caraga, Philippines  
 *February 2013 – July 2013 (6 months)*
