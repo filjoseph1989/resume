@@ -1235,7 +1235,8 @@ body {
   .project-filters,
   .footer,
   .modal-backdrop,
-  .toast-container {
+  .toast-container,
+  .status-pill {
     display: none !important;
   }
 
@@ -1325,17 +1326,64 @@ body {
   }
 
   .contact-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-    margin-top: 8pt !important;
-    padding-top: 8pt !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 8pt !important;
+    border-top: none !important;
+    margin-top: 6pt !important;
+    margin-bottom: 10pt !important;
+    padding-top: 0 !important;
+    width: 100% !important;
   }
 
   .contact-item {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4pt !important;
     background: transparent !important;
     border: none !important;
-    padding: 2pt 0 !important;
-    font-size: 9pt !important;
+    padding: 0 !important;
     color: #334155 !important;
+    white-space: nowrap !important;
+    flex-shrink: 1 !important;
+  }
+
+  .contact-item .contact-icon {
+    width: 10pt !important;
+    height: 10pt !important;
+    color: #475569 !important;
+    flex-shrink: 0 !important;
+  }
+
+  .contact-item div {
+    display: inline-flex !important;
+    flex-direction: row !important;
+    align-items: baseline !important;
+    gap: 3pt !important;
+  }
+
+  .contact-item .contact-label {
+    font-size: 7.2pt !important;
+    font-weight: 700 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em !important;
+    display: inline !important;
+  }
+
+  .contact-item .contact-label::after {
+    content: ":";
+  }
+
+  .contact-item .contact-value {
+    font-size: 7.5pt !important;
+    font-weight: 500 !important;
+    color: #0f172a !important;
+    white-space: nowrap !important;
   }
 
   .projects-grid {
