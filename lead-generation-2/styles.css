@@ -153,15 +153,12 @@ body {
 .sheet-wrapper {
   display: flex;
   justify-content: center;
-  padding: 36px 16px 56px;
+  padding: 28px 16px 28px;
   width: 100%;
   overflow-x: auto;
 }
 
 .sheet-scaler {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
   width: 8.5in;
   flex-shrink: 0;
 }
@@ -169,18 +166,18 @@ body {
 @media (max-width: 860px) {
   .sheet-wrapper {
     overflow-x: hidden;
-    padding: 16px 8px 32px;
-  }
-  .sheet-scaler {
-    width: 100%;
-    position: relative;
+    padding: 16px 8px;
   }
 }
 
 .resume-sheet {
   width: 8.5in;
   min-height: 11in;
-  padding: 30pt 40pt 30pt 40pt;
+  padding: 26pt 24pt 24pt 24pt;
+  display: flex;
+  flex-direction: column;
+  /* Spread any leftover height between sections so content always reaches the bottom margin */
+  justify-content: space-between;
   background: var(--sheet-bg);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.04);
   border: 1px solid #e2e8f0;
@@ -197,13 +194,13 @@ body {
 
 /* Header */
 .doc-header {
-  padding-bottom: 8pt;
+  padding-bottom: 9pt;
   margin-bottom: 2pt;
   border-bottom: 2pt solid var(--border-rule);
 }
 
 .candidate-name {
-  font-size: 22pt;
+  font-size: 24pt;
   font-weight: 800;
   line-height: 1.1;
   margin: 0;
@@ -212,16 +209,16 @@ body {
 }
 
 .candidate-subtitle {
-  font-size: 9.5pt;
+  font-size: 10.5pt;
   font-weight: 600;
   line-height: 1.3;
-  margin: 3pt 0 4pt;
+  margin: 4pt 0 5pt;
   color: #334155;
   letter-spacing: 0.02em;
 }
 
 .candidate-contact {
-  font-size: 8.5pt;
+  font-size: 9pt;
   line-height: 1.35;
   color: #475569;
 }
@@ -244,14 +241,14 @@ body {
 
 /* Sections */
 .section-block {
-  margin-top: 11pt;
+  margin-top: 12pt;
 }
 
 .section-heading {
-  font-size: 9.5pt;
+  font-size: 10pt;
   font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 6pt;
+  margin: 0 0 7pt;
   padding-bottom: 2.5pt;
   color: var(--text-heading);
   text-transform: uppercase;
@@ -263,8 +260,8 @@ body {
 .summary-text,
 .skills-grid,
 .bullet-list li {
-  font-size: 9pt;
-  line-height: 1.4;
+  font-size: 9.75pt;
+  line-height: 1.42;
   color: #334155;
 }
 
@@ -280,7 +277,7 @@ body {
   display: grid;
   grid-template-columns: 1.15in 1fr;
   column-gap: 8pt;
-  row-gap: 2pt;
+  row-gap: 3pt;
   margin: 0;
 }
 
@@ -295,7 +292,7 @@ body {
 
 /* Job Entries */
 .job-entry + .job-entry {
-  margin-top: 8pt;
+  margin-top: 9.5pt;
 }
 
 .job-line-1,
@@ -307,14 +304,14 @@ body {
 }
 
 .job-line-1 {
-  font-size: 10pt;
+  font-size: 10.5pt;
   font-weight: 700;
   line-height: 1.3;
   color: var(--text-heading);
 }
 
 .job-dates {
-  font-size: 9pt;
+  font-size: 9.5pt;
   font-weight: 600;
   color: #334155;
   white-space: nowrap;
@@ -322,7 +319,7 @@ body {
 }
 
 .job-line-2 {
-  font-size: 9pt;
+  font-size: 9.5pt;
   line-height: 1.3;
   color: #334155;
 }
@@ -332,7 +329,7 @@ body {
 }
 
 .job-location {
-  font-size: 8.5pt;
+  font-size: 9pt;
   color: #64748b;
   white-space: nowrap;
 }
@@ -340,12 +337,12 @@ body {
 /* Bullet Lists */
 .bullet-list {
   list-style: disc;
-  margin: 3pt 0 0 12pt;
+  margin: 4pt 0 0 13pt;
   padding: 0;
 }
 
 .bullet-list li {
-  margin-bottom: 1.5pt;
+  margin-bottom: 2pt;
   padding-left: 2pt;
   text-align: justify;
   hyphens: auto;
@@ -389,7 +386,7 @@ body {
    ========================================================================== */
 @page {
   size: letter portrait;
-  margin: 0.35in 0.45in 0.35in 0.45in;
+  margin: 0.36in 0.33in 0.33in 0.33in;
 }
 
 @media print {
@@ -429,9 +426,11 @@ body {
     margin: 0 !important;
     padding: 0 !important;
     width: 100% !important;
-    min-height: 0 !important;
+    min-height: 10.2in !important;
     height: auto !important;
+    display: flex !important;
     transform: none !important;
+    zoom: 1 !important;
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
   }

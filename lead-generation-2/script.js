@@ -49,31 +49,20 @@ function showToast(text) {
   }, 2200);
 }
 
-// Auto-scale sheet for narrow mobile and tablet screens
+// Scale the sheet so its edges line up with the toolbar content on every screen size
 function fitSheetToScreen() {
   const sheet = document.getElementById('resume');
   const scaler = document.getElementById('scaler');
-  if (!sheet || !scaler) return;
-  
-  if (window.innerWidth < 856) {
-    const availableWidth = window.innerWidth - 24;
-    const baseWidth = 816; // 8.5in at 96 DPI
-    const scale = Math.min(1, Math.max(0.25, availableWidth / baseWidth));
-    
-    sheet.style.transform = `scale(${scale})`;
-    sheet.style.transformOrigin = 'top left';
-    
-    const baseHeight = 1056; // 11in at 96 DPI
-    scaler.style.width = `${Math.ceil(baseWidth * scale)}px`;
-    scaler.style.height = `${Math.ceil(baseHeight * scale)}px`;
-    scaler.style.margin = '0 auto';
-  } else {
-    sheet.style.transform = '';
-    sheet.style.transformOrigin = '';
-    scaler.style.width = '8.5in';
-    scaler.style.height = '';
-    scaler.style.margin = '';
-  }
+  const nav = document.querySelector('.nav-container');
+  if (!sheet || !scaler || !nav) return;
+
+  const navStyle = getComputedStyle(nav);
+  const targetWidth = nav.clientWidth - parseFloat(navStyle.paddingLeft) - parseFloat(navStyle.paddingRight);
+  const baseWidth = 816; // 8.5in at 96 DPI
+  const scale = Math.max(0.25, targetWidth / baseWidth);
+
+  sheet.style.zoom = scale;
+  scaler.style.width = `${baseWidth * scale}px`;
 }
 
 window.addEventListener('resize', fitSheetToScreen);
