@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fil Joseph Elman - Resume</title>
+  <meta name="description" content="One-page resume of Fil Joseph Elman tailored for an Assistant Property Manager role">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-size: 8.4pt;
+      line-height: 1.28;
+      color: #111;
+      background: #e5e5e5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen: center the A4 sheet; an inline script scales it to fit the viewport */
+    @media screen {
+      html, body { height: 100%; overflow: hidden; }
+      .page {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(var(--fit, 1));
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 9mm 13mm 8mm;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+    }
+
+    a { color: inherit; }
+
+    /* Header */
+    header { text-align: center; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
+    h1 { font-size: 20pt; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; }
+    .headline { font-size: 10.5pt; margin-top: 2px; }
+    .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; margin-top: 4px; font-size: 8pt; }
+    .contact span { display: inline-flex; align-items: center; gap: 5px; }
+    .contact svg { width: 10px; height: 10px; flex: none; }
+
+    /* Sections */
+    h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      margin-top: 6px;
+      padding-bottom: 1px;
+      border-bottom: 2px solid #ddd;
+    }
+    h3 { font-size: 10.5pt; font-weight: 500; }
+    p + p { margin-top: 4px; }
+    .about { margin-top: 4px; }
+
+    /* Professional attributes */
+    .attributes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 4px; }
+    .attributes h3 { margin-bottom: 3px; }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 2px 5px;
+      font-size: 8pt;
+      margin-bottom: 3px;
+      /* Fixed two-line height so every card matches */
+      display: flex;
+      align-items: center;
+      height: calc(2.56em + 6px);
+    }
+
+    /* Experience */
+    .job { margin-top: 5px; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .job-date { font-size: 8.4pt; white-space: nowrap; }
+    .company { margin-top: 1px; }
+    ul { list-style: none; margin-top: 2px; padding-left: 12px; }
+    li { position: relative; padding-left: 10px; margin-top: 1px; }
+    li::before { content: "•"; position: absolute; left: 0; font-weight: 700; }
+    li ul { margin-top: 0; padding-left: 4px; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; align-items: center; margin-top: 4px; }
+    .skills dt { font-weight: 500; font-size: 8.4pt; white-space: nowrap; }
+    .skills dd { display: flex; flex-wrap: wrap; gap: 4px; }
+    .chip {
+      border: 1px solid #ccc;
+      background: #f2f2f2;
+      border-radius: 999px;
+      padding: 0 6px;
+      font-size: 7.4pt;
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .edu { margin-top: 4px; }
+    .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <h1>Fil Joseph Elman</h1>
+      <div class="headline">Virtual Assistant | Administrative Support | Client Communication</div>
+      <div class="contact">
+        <span>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          Davao, Davao Region, Philippines
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5h20v14H2zm2 2v.5l8 5 8-5V7z"/></svg>
+          <a href="mailto:filjoseph22@gmail.com">filjoseph22@gmail.com</a>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          +63 912 491 8787
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+          <a href="https://filjoseph1989.github.io">filjoseph1989.github.io</a>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="7" cy="12" rx="6" ry="6"/><ellipse cx="17" cy="12" rx="3" ry="5.5"/><ellipse cx="22" cy="12" rx="1" ry="5"/></svg>
+          <a href="https://medium.com/@filjoseph">medium.com/@filjoseph</a>
+        </span>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg>
+          <a href="https://linktr.ee/elmanfil">linktr.ee/elmanfil</a>
+        </span>
+      </div>
+    </header>
+
+    <h2>About</h2>
+    <div class="about">
+      <p>Detail-oriented remote virtual assistant with a background in data encoding, records management, and client-facing roles. I currently support leadership with inbox triage, calendar coordination, invoicing, and keeping client records accurate, and I have worked remotely with Australian companies based in Melbourne.</p>
+      <p>My Computer Science degree and years of technical work make me quick to learn new software and systems. I am comfortable handling client and stakeholder communication by email and calls, coordinating schedules across time zones, and keeping files and data organized and up to date.</p>
+    </div>
+
+    <h2>Professional Attributes</h2>
+    <div class="attributes">
+      <div>
+        <h3>Core Strengths</h3>
+        <div class="card">Clear, professional email and phone communication with clients, executives, and teams.</div>
+        <div class="card">Accurate data entry, record keeping, and routine data quality checks.</div>
+        <div class="card">Manage inboxes, calendars, and task boards for several stakeholders at once.</div>
+      </div>
+      <div>
+        <h3>Growth Areas</h3>
+        <div class="card">Building hands-on proficiency with property management software such as PropertyMe and Kolmeo.</div>
+        <div class="card">Continuously improving time estimation skills for complex tasks.</div>
+        <div class="card">Maintaining a strong professional presence while working remotely.</div>
+      </div>
+    </div>
+
+    <h2>Work Experience</h2>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Business Development Representative</h3>
+        <span class="job-date">Aug 2026 - Present (3 months)</span>
+      </div>
+      <div class="company">Senpai Technologies | United Kingdom (Remote)</div>
+      <ul>
+        <li>Communicate with C-level executives through personalized email and LinkedIn outreach, handling replies and follow-ups.</li>
+        <li>Coordinate and book discovery calls for the founder, keeping prospect records and schedules up to date.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Lead Generation Virtual Assistant</h3>
+        <span class="job-date">Jun 2025 - Present (1 year 5 months)</span>
+      </div>
+      <div class="company">Creative One Growth | Davao, Philippines (Remote)</div>
+      <ul>
+        <li>Manage inbox triage, calendar coordination, and project tracking in Asana and Notion for leadership.</li>
+        <li>Maintain accurate lead and client records in HubSpot CRM through routine data quality checks.</li>
+        <li>Handle invoicing, research, and content scheduling so leadership can focus on revenue.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Engineer / Technical Lead</h3>
+        <span class="job-date">May 2021 - Sep 2023 (2 years 5 months)</span>
+      </div>
+      <div class="company">Picture Works Australia | Melbourne, Victoria, Australia (Remote)</div>
+      <ul>
+        <li>Served as the primary point of contact for the company's largest client, coordinating requirements and updates across teams.</li>
+        <li>Acted as a key escalation point for support issues, investigating problems and communicating resolutions.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Product Developer</h3>
+        <span class="job-date">Jun 2020 - Feb 2021 (9 months)</span>
+      </div>
+      <div class="company">uBind | Melbourne, Victoria, Australia (Remote)</div>
+      <ul>
+        <li>Built insurance policy application forms in Microsoft Excel using complex formulas and conditional rules.</li>
+        <li>Prepared detailed spreadsheets used to generate guided online application forms for Australian clients' customers.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Financial Advisor</h3>
+        <span class="job-date">2013 - 2014</span>
+      </div>
+      <div class="company">Philam Life | Davao City, Philippines</div>
+      <ul>
+        <li>Advised clients on insurance, retirement, education, and investment plans through needs-based consultations.</li>
+        <li>Built and maintained a client base through direct outreach and ongoing portfolio reviews.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Geographic Information Systems Analyst</h3>
+        <span class="job-date">Feb 2013 - Jul 2013 (6 months)</span>
+      </div>
+      <div class="company">Caraga State University | Butuan, Caraga, Philippines</div>
+      <ul>
+        <li>Gathered and photographed land titles and land maps in Butuan City for a GIS digitization project.</li>
+        <li>Converted map images into digital vector data using ArcGIS, keeping land records accurate.</li>
+      </ul>
+    </section>
+
+    <section class="job">
+      <div class="job-head">
+        <h3>Data Encoder Analyst</h3>
+        <span class="job-date">Oct 2012 - Feb 2013 (5 months)</span>
+      </div>
+      <div class="company">Green Pine Agricultural Development Corporation | Butuan, Caraga, Philippines</div>
+      <ul>
+        <li>Encoded and managed production data, ensuring the accuracy and integrity of all records.</li>
+        <li>Prepared weekly and monthly reports for key stakeholders, including San Miguel Corporation, and resolved discrepancies.</li>
+      </ul>
+    </section>
+
+    <h2>Tools &amp; Skills</h2>
+    <dl class="skills">
+      <dt>Office &amp; Communication:</dt>
+      <dd><span class="chip">Microsoft Excel</span><span class="chip">Microsoft Teams</span><span class="chip">Google Workspace</span><span class="chip">Slack</span></dd>
+      <dt>Task &amp; Records Management:</dt>
+      <dd><span class="chip">Asana</span><span class="chip">Notion</span><span class="chip">ClickUp</span><span class="chip">HubSpot CRM</span><span class="chip">Jira</span></dd>
+      <dt>Administrative:</dt>
+      <dd><span class="chip">Data Entry</span><span class="chip">Filing &amp; Records</span><span class="chip">Inbox &amp; Calendar Management</span><span class="chip">Invoicing</span><span class="chip">Reporting</span></dd>
+    </dl>
+
+    <h2>Education</h2>
+    <div class="edu">
+      <div class="edu-head">
+        <h3>Caraga State University</h3>
+        <span class="job-date">2006 - 2012</span>
+      </div>
+      <div>Bachelor of Science in Computer Science · Director for Project, Junior Philippine Computer Society · Vice President, Computer Science Society</div>
+    </div>
+  </main>
+
+  <script>
+    // Scale the A4 sheet so it fits the viewport's width and height, with a small gutter.
+    (function () {
+      var page = document.querySelector('.page');
+      var gutter = 16;
+      function fit() {
+        var scale = Math.min(
+          (window.innerWidth - gutter * 2) / page.offsetWidth,
+          (window.innerHeight - gutter * 2) / page.offsetHeight
+        );
+        page.style.setProperty('--fit', Math.max(scale, 0.1));
+      }
+      window.addEventListener('resize', fit);
+      fit();
+    })();
+  </script>
+</body>
+</html>
