@@ -4,10 +4,13 @@ A full-stack, dynamic resume and portfolio web application built with **Node.js*
 
 ## Architecture & Features
 
-- **PostgreSQL Database (`resume_db`)**: Stores normalized relational data across 9 tables (`profiles`, `skill_categories`, `skills`, `experiences`, `projects`, `education`, `certifications`, `references`, `publications`).
-- **RESTful API Backend**: Express server with routes for fetching aggregated resume payloads and performing CRUD updates.
-- **Frontend & Dynamic Hydration**: Responsive glassmorphic UI that fetches data in real-time from `/api/resume`, while retaining graceful fallback capabilities.
-- **Admin / Data Manager Modal**: Built-in modal accessible via the **"Edit Data"** button in the navigation bar to edit profile info, manage work experience, update projects, and add/remove skills directly from the browser.
+- **Resume JSON (`data/*.json`)**: Each resume is one JSON file, named by its slug: `tech`, `virtual-assistant`, `data-entry`. These files are the seed data.
+- **PostgreSQL Database (`resume_db`)**: A single `resumes` table (`slug`, `data JSONB`, `updated_at`) holds one row per resume.
+- **RESTful API Backend**: Express routes to list, read, replace and reset each resume's JSON.
+- **JSON-rendered pages**: Every resume page renders from `/api/resumes/<slug>`; the slug comes from `<body data-resume="...">`.
+  - `/tech/` uses `script.js`.
+  - `/profile-apm/` (`virtual-assistant`) and `/profile-data-entry/` (`data-entry`) share `one-page.js`.
+- **JSON Editor**: The **"Edit Data"** button on the tech resume opens the resume's JSON for editing, saving and resetting to its seed file.
 - **Interactive Features**: Real-time search, skill chip quick-filtering, project category filters, Recruiter vs Detailed view toggles, dark/light theme switcher, raw markdown viewer, and print-to-PDF formatting.
 
 ---
