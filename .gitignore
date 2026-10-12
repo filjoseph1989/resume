@@ -3,3 +3,5 @@ prompt.md
 .env
 node_modules
 dist
+backups/
+data/
