@@ -31,16 +31,6 @@ app.get('/health', async (req, res) => {
   }
 });
 
-// Lead Generation Resume Route
-app.get(['/lead-generation', '/lead-generation/'], (req, res) => {
-  res.sendFile(path.join(__dirname, 'lead-generation', 'index.html'));
-});
-
-// Lead Generation 2 Resume Route (Classic ATS / PDF Match)
-app.get(['/lead-generation-2', '/lead-generation-2/'], (req, res) => {
-  res.sendFile(path.join(__dirname, 'lead-generation-2', 'index.html'));
-});
-
 // Serve static files
 app.use(express.static(path.join(__dirname)));
 
