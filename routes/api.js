@@ -5,17 +5,27 @@ const db = require('../db');
 // List resumes
 router.get('/resumes', async (req, res) => {
   try {
-    const result = await db.query('SELECT slug, updated_at FROM resumes ORDER BY slug');
+    const result = await db.query('SELECT id, slug, updated_at FROM resumes ORDER BY id');
     res.json({ success: true, data: result.rows });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
+// Slug alias mapping
+const SLUG_ALIASES = {
+  'christine': 'christine-toraque',
+  'profile-christine': 'christine-toraque',
+  'profile-christine-toraque': 'christine-toraque',
+  'profile-gva': 'christine-toraque',
+  'gva': 'christine-toraque'
+};
+
 // One resume's JSON
 router.get('/resumes/:slug', async (req, res) => {
   try {
-    const result = await db.query('SELECT data FROM resumes WHERE slug = $1', [req.params.slug]);
+    const slug = SLUG_ALIASES[req.params.slug] || req.params.slug;
+    const result = await db.query('SELECT data FROM resumes WHERE slug = $1', [slug]);
     if (result.rowCount === 0) {
       return res.status(404).json({ success: false, error: 'Resume not found' });
     }

@@ -1214,18 +1214,49 @@ body {
   font-size: 0.85rem;
 }
 
-/* Print Stylesheet */
+/* Print Stylesheet
+   Compact A4 layout: light palette regardless of the on-screen theme, card chrome
+   stripped, and sections allowed to flow across pages so no page is left half empty. */
 @media print {
   @page {
-    margin: 12mm 15mm;
+    margin: 10mm 12mm;
     size: A4 portrait;
+  }
+
+  /* Always print with the light palette, even when the dark theme is active */
+  :root,
+  [data-theme="light"] {
+    --bg-base: #ffffff;
+    --bg-surface: #ffffff;
+    --bg-card: transparent;
+    --bg-badge: transparent;
+    --border-subtle: #e2e8f0;
+    --border-card: #e2e8f0;
+    --border-accent: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #334155;
+    --text-muted: #64748b;
+    --text-heading: #0f172a;
+    --accent: #4f46e5;
+    --accent-light: #4338ca;
+    --success: #059669;
+    --tag-bg: transparent;
+    --tag-text: #475569;
+  }
+
+  /* Most sizes are in rem, so shrinking the root scales the whole page down */
+  html {
+    font-size: 12px;
   }
 
   body {
     background: #ffffff !important;
     color: #1e293b !important;
-    font-size: 11pt !important;
-    line-height: 1.45 !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
+    min-height: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .ambient-glow,
@@ -1236,7 +1267,13 @@ body {
   .footer,
   .modal-backdrop,
   .toast-container,
-  .status-pill {
+  .status-pill,
+  .section-header > span,
+  .contact-item.contact-item-address,
+  .timeline-node,
+  .timeline::before,
+  .job-tags,
+  .project-techs {
     display: none !important;
   }
 
@@ -1245,103 +1282,66 @@ body {
     padding: 0 !important;
   }
 
-  .hero {
-    padding: 0 0 12pt 0 !important;
-  }
-
+  /* Strip card chrome everywhere */
   .hero-card,
   .summary-card,
+  .expertise-item,
+  .skill-category-card,
   .timeline-content,
   .project-card,
   .info-card,
-  .skill-category-card {
+  .cert-item,
+  .ref-card {
     background: transparent !important;
     border: none !important;
+    border-radius: 0 !important;
     box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
     padding: 0 !important;
-    margin-bottom: 12pt !important;
+    transform: none !important;
+  }
+
+  /* Header */
+  .hero {
+    padding: 0 0 6pt !important;
+    margin-bottom: 8pt !important;
+    border-bottom: 1pt solid #cbd5e1;
   }
 
   .hero-name {
     font-size: 20pt !important;
+    line-height: 1.1 !important;
     color: #0f172a !important;
   }
 
   .hero-tagline {
-    font-size: 11pt !important;
+    font-size: 10pt !important;
+    margin: 2pt 0 !important;
     background: none !important;
     -webkit-text-fill-color: #334155 !important;
     color: #334155 !important;
   }
 
-  .section {
-    margin-bottom: 16pt !important;
-    page-break-inside: avoid;
-  }
-
-  .section-title {
-    font-size: 13pt !important;
-    color: #0f172a !important;
-    border-bottom: 1.5pt solid #cbd5e1 !important;
-    padding-bottom: 3pt !important;
-    margin-bottom: 8pt !important;
-  }
-
-  .timeline {
-    padding-left: 0 !important;
-  }
-
-  .timeline::before,
-  .timeline-node {
-    display: none !important;
-  }
-
-  .timeline-item {
-    margin-bottom: 12pt !important;
-    page-break-inside: avoid;
-  }
-
-  .job-header {
-    margin-bottom: 4pt !important;
-  }
-
-  .job-company {
-    font-size: 11.5pt !important;
-  }
-
-  .job-role {
-    color: #475569 !important;
-    font-size: 10.5pt !important;
-  }
-
-  .job-bullets li {
-    font-size: 9.5pt !important;
-    line-height: 1.35 !important;
-    margin-bottom: 3pt !important;
-    color: #334155 !important;
-  }
-
-  .job-tags, .project-techs {
-    display: none !important;
+  .hero-location {
+    font-size: 8.5pt !important;
+    margin: 0 !important;
   }
 
   .contact-grid {
     display: flex !important;
-    flex-direction: row !important;
     flex-wrap: nowrap !important;
     justify-content: space-between !important;
     align-items: center !important;
     gap: 8pt !important;
     border-top: none !important;
-    margin-top: 6pt !important;
-    margin-bottom: 10pt !important;
-    padding-top: 0 !important;
+    margin: 4pt 0 0 !important;
+    padding: 0 !important;
     width: 100% !important;
   }
 
   .contact-item {
     display: inline-flex !important;
-    flex-direction: row !important;
     align-items: center !important;
     gap: 4pt !important;
     background: transparent !important;
@@ -1349,7 +1349,6 @@ body {
     padding: 0 !important;
     color: #334155 !important;
     white-space: nowrap !important;
-    flex-shrink: 1 !important;
   }
 
   .contact-item .contact-icon {
@@ -1361,7 +1360,6 @@ body {
 
   .contact-item div {
     display: inline-flex !important;
-    flex-direction: row !important;
     align-items: baseline !important;
     gap: 3pt !important;
   }
@@ -1372,7 +1370,6 @@ body {
     color: #64748b !important;
     text-transform: uppercase !important;
     letter-spacing: 0.04em !important;
-    display: inline !important;
   }
 
   .contact-item .contact-label::after {
@@ -1383,16 +1380,270 @@ body {
     font-size: 7.5pt !important;
     font-weight: 500 !important;
     color: #0f172a !important;
-    white-space: nowrap !important;
   }
 
+  /* Sections flow freely; only the heading is kept with its content */
+  .section {
+    margin-bottom: 9pt !important;
+  }
+
+  .section-header {
+    margin-bottom: 5pt !important;
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+
+  .section-title {
+    width: 100%;
+    gap: 5pt !important;
+    font-size: 11.5pt !important;
+    color: #0f172a !important;
+    border-bottom: 1pt solid #cbd5e1 !important;
+    padding-bottom: 2pt !important;
+  }
+
+  .section-title svg {
+    width: 12pt !important;
+    height: 12pt !important;
+  }
+
+  /* Summary */
+  .summary-card p {
+    margin-bottom: 4pt !important;
+    line-height: 1.45 !important;
+  }
+
+  .expertise-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 5pt 12pt !important;
+    margin: 6pt 0 !important;
+  }
+
+  .expertise-item {
+    break-inside: avoid;
+  }
+
+  .expertise-title {
+    font-size: 8.5pt !important;
+    margin-bottom: 1pt !important;
+  }
+
+  .expertise-desc {
+    line-height: 1.35 !important;
+  }
+
+  /* Skills: one row per category, chips as plain text */
+  .skills-dashboard {
+    gap: 3pt !important;
+  }
+
+  .skill-category-card {
+    display: grid !important;
+    grid-template-columns: 54mm 1fr;
+    gap: 8pt;
+    align-items: baseline;
+    break-inside: avoid;
+  }
+
+  .skill-category-header {
+    margin: 0 !important;
+  }
+
+  .skill-category-name {
+    font-size: 8.5pt !important;
+    gap: 4pt !important;
+    white-space: nowrap;
+  }
+
+  .skill-chips {
+    gap: 2pt 9pt !important;
+  }
+
+  .skill-chip {
+    padding: 0 !important;
+    gap: 3pt !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-size: 8.5pt !important;
+    font-weight: 500 !important;
+    color: #1e293b !important;
+  }
+
+  .skill-chip-years {
+    padding: 0 !important;
+    background: transparent !important;
+    font-size: 7.5pt !important;
+    font-weight: 500 !important;
+    color: #64748b !important;
+  }
+
+  .skill-chip-years::before { content: "("; }
+  .skill-chip-years::after { content: ")"; }
+
+  /* Experience */
+  .timeline {
+    padding-left: 0 !important;
+  }
+
+  .timeline-item {
+    margin-bottom: 7pt !important;
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .job-header {
+    flex-wrap: nowrap !important;
+    align-items: baseline !important;
+    gap: 10pt !important;
+    margin-bottom: 0 !important;
+  }
+
+  .job-company {
+    font-size: 10.5pt !important;
+  }
+
+  .job-title-row {
+    font-size: 8.5pt;
+  }
+
+  .job-role {
+    font-size: 9pt !important;
+  }
+
+  .job-meta {
+    flex-shrink: 0;
+    gap: 1pt !important;
+  }
+
+  .job-duration {
+    padding: 0 !important;
+    background: transparent !important;
+    font-size: 8pt !important;
+  }
+
+  .job-location {
+    font-size: 8pt !important;
+  }
+
+  .job-desc {
+    margin-top: 2pt !important;
+    font-style: italic;
+  }
+
+  .job-bullets {
+    margin-top: 3pt !important;
+  }
+
+  .job-bullets li {
+    padding-left: 11pt !important;
+    margin-bottom: 1.5pt !important;
+    line-height: 1.38 !important;
+  }
+
+  .job-bullets li::before {
+    font-size: 8pt !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Projects: two columns */
   .projects-grid {
-    grid-template-columns: 1fr !important;
-    gap: 8pt !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 8pt 14pt !important;
   }
 
   .project-card {
+    justify-content: flex-start !important;
+    break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .project-header {
+    align-items: baseline !important;
+    margin-bottom: 0 !important;
+  }
+
+  .project-title {
+    font-size: 10pt !important;
+  }
+
+  .project-role {
+    margin-bottom: 2pt !important;
+  }
+
+  .project-desc {
+    margin-bottom: 3pt !important;
+    line-height: 1.38 !important;
+  }
+
+  .project-card > div > div[style] {
+    margin-bottom: 3pt !important;
+    line-height: 1.38 !important;
+  }
+
+  .project-highlights {
+    margin-bottom: 3pt !important;
+  }
+
+  .project-highlights li {
+    margin-bottom: 1.5pt !important;
+    padding-left: 11pt !important;
+    line-height: 1.38 !important;
+  }
+
+  .project-tags {
+    font-size: 7.5pt;
+    color: #64748b;
+  }
+
+  .project-tags .tag:not(:last-child)::after {
+    content: ", ";
+  }
+
+  /* Education, certifications & references */
+  .dual-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 6pt 14pt !important;
+  }
+
+  .info-card,
+  .ref-card {
+    break-inside: avoid;
+  }
+
+  .info-card-title {
+    font-size: 9.5pt !important;
+    margin-bottom: 3pt !important;
+  }
+
+  .edu-meta {
+    margin-bottom: 4pt !important;
+  }
+
+  .edu-details div[style] {
+    margin-bottom: 3pt !important;
+  }
+
+  .edu-details .skill-chips {
+    gap: 2pt 8pt !important;
+  }
+
+  .project-tech {
+    padding: 0 !important;
+    font-weight: 500 !important;
+  }
+
+  .cert-list {
+    gap: 2pt !important;
+  }
+
+  .cert-item {
+    gap: 5pt !important;
+  }
+
+  .cert-item[style] {
+    padding-left: 0 !important;
+    border-left: none !important;
   }
 }
 

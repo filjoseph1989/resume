@@ -75,7 +75,40 @@
         '<div class="edu-head"><h3>' + esc(edu.school) + '</h3><span class="job-date">' + esc(edu.dates) + '</span></div>' +
         (edu.details ? '<div>' + esc(edu.details) + '</div>' : '') +
         (edu.thesis ? '<div><span class="label">Thesis:</span> <em>' + esc(edu.thesis) + '</em>' + (edu.thesisNote ? ' ' + esc(edu.thesisNote) : '') + '</div>' : '') +
-      '</div>';
+      '</div>' +
+
+      (d.certifications && d.certifications.length ?
+        '<h2>Certifications</h2>' +
+        '<div class="certs">' +
+          list(d.certifications).map(function (c) {
+            var cert = typeof c === 'string' ? { name: c } : c;
+            return '<div class="cert-item"><span class="label">' + esc(cert.name) + '</span>' +
+              (cert.issuer ? '<span class="job-date">' + esc(cert.issuer) + '</span>' : '') +
+            '</div>';
+          }).join('') +
+        '</div>' : '') +
+
+      (d.references && d.references.length ?
+        '<h2>References</h2>' +
+        '<div class="references">' +
+          list(d.references).map(function (ref) {
+            return '<div class="ref-card">' +
+              '<div class="ref-name">' + esc(ref.name) + '</div>' +
+              (ref.title ? '<div class="ref-title">' + esc(ref.title) + (ref.company ? ' · ' + esc(ref.company) : '') + '</div>' : (ref.company ? '<div class="ref-title">' + esc(ref.company) + '</div>' : '')) +
+              (ref.phone ? '<div class="ref-contact">' + esc(ref.phone) + '</div>' : '') +
+              (ref.email ? '<div class="ref-contact">' + esc(ref.email) + '</div>' : '') +
+            '</div>';
+          }).join('') +
+        '</div>' : '') +
+
+      (d.personalData ?
+        '<h2>Personal Details</h2>' +
+        '<div class="personal-grid">' +
+          (d.personalData.nationality ? '<div><span class="label">Nationality:</span> ' + esc(d.personalData.nationality) + '</div>' : '') +
+          (d.personalData.civilStatus ? '<div><span class="label">Civil Status:</span> ' + esc(d.personalData.civilStatus) + '</div>' : '') +
+          (d.personalData.sex ? '<div><span class="label">Sex:</span> ' + esc(d.personalData.sex) + '</div>' : '') +
+          (d.personalData.religion ? '<div><span class="label">Religion:</span> ' + esc(d.personalData.religion) + '</div>' : '') +
+        '</div>' : '');
   }
 
   // Scale the A4 sheet so it fits the viewport's width and height, with a small gutter.
@@ -94,6 +127,7 @@
     .then(function (res) { return res.json(); })
     .then(function (result) {
       if (!result.success) throw new Error(result.error);
+      if (result.data && result.data.name) document.title = result.data.name + ' - Resume';
       render(result.data);
     })
     .catch(function (err) {

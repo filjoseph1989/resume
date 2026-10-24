@@ -123,6 +123,35 @@
     .edu > div:not(.edu-head) { color: var(--muted); }
     .edu .label { font-weight: 500; color: var(--ink); }
 
+    /* Certifications */
+    .certs { margin-top: 4px; font-size: 8.2pt; }
+    .cert-item { display: flex; justify-content: space-between; align-items: baseline; }
+
+    /* References */
+    .references { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 4px; }
+    .ref-card {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 7.8pt;
+    }
+    .ref-name { font-weight: 600; color: var(--ink); }
+    .ref-title { color: var(--muted); font-size: 7.2pt; }
+    .ref-contact { color: var(--muted); font-size: 7.2pt; margin-top: 1px; }
+
+    /* Personal Data */
+    .personal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+    }
+    .personal-grid .label { font-weight: 500; color: var(--ink); }
+
     @media print {
       body { background: #fff; }
       .page { margin: 0; box-shadow: none; }

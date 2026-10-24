@@ -5,7 +5,7 @@ A full-stack, dynamic resume and portfolio web application built with **Node.js*
 ## Architecture & Features
 
 - **Resume JSON (`data/*.json`)**: Each resume is one JSON file, named by its slug: `tech`, `virtual-assistant`, `data-entry`. These files are the seed data.
-- **PostgreSQL Database (`resume_db`)**: A single `resumes` table (`slug`, `data JSONB`, `updated_at`) holds one row per resume.
+- **PostgreSQL Database (`resume_db`)**: A single `resumes` table (`id` auto-increment primary key, unique `slug`, `data JSONB`, `updated_at`) holds one row per resume.
 - **RESTful API Backend**: Express routes to list, read, replace and reset each resume's JSON.
 - **JSON-rendered pages**: Every resume page renders from `/api/resumes/<slug>`; the slug comes from `<body data-resume="...">`.
   - `/tech/` uses `script.js`.
@@ -34,14 +34,14 @@ PORT=3000
 | `npm run dev` | Start development server with automatic file watching |
 | `npm test` | Run the integration tests for health and the resume JSON endpoints |
 | `npm run seed [slug]` | Load `data/*.json` into the `resumes` table (all, or one slug) |
-| `npm run db:init` | Create the `resumes` table (drops the old normalized tables) |
+| `npm run db:init` | Create or migrate the `resumes` table (drops the old normalized tables) |
 
 ---
 
 ## REST API Endpoints
 
 - `GET /health` &mdash; Server and database connection health check
-- `GET /api/resumes` &mdash; List resume slugs
+- `GET /api/resumes` &mdash; List resumes (`id`, `slug`, `updated_at`)
 - `GET /api/resumes/:slug` &mdash; One resume's JSON
 - `PUT /api/resumes/:slug` &mdash; Replace one resume's JSON
 - `POST /api/resumes/:slug/reset` &mdash; Reset one resume to `data/<slug>.json`
