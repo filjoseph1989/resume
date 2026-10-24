@@ -1,4 +1,241 @@
-# Fil Joseph Elman
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fil Joseph Elman | Technical Lead & Full-Stack Developer</title>
+  <meta name="description" content="Technical Lead, Full-Stack Developer, and API Integration Specialist with expertise in PHP (Laravel, CodeIgniter), Python, AI, IoT, and high-throughput systems.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-resume="tech">
+  <!-- Ambient background glow effect -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-brand-badge">FE</div>
+          <span>Fil Joseph Elman</span>
+        </a>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <!-- Icon injected by script.js -->
+          </button>
+          <button id="admin-toggle-btn" class="btn btn-secondary" title="Edit this resume's JSON in PostgreSQL">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            <span>Edit Data</span>
+          </button>
+          <button onclick="handlePrint()" class="btn btn-primary" title="Print or save as PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div class="hero-info">
+            <div class="status-pill"></div>
+            <h1 class="hero-name"></h1>
+            <p class="hero-tagline"></p>
+            <p class="hero-location"></p>
+
+            <div class="hero-actions">
+              <button id="btn-copy-email" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Copy Email</span>
+              </button>
+
+              <button id="btn-copy-phone" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Copy Phone</span>
+              </button>
+
+              <button id="btn-view-markdown" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>View Raw Markdown</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Badges Grid -->
+        <div class="contact-grid"></div>
+      </div>
+    </section>
+
+    <!-- Controls Bar: Real-time Search & View Mode -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search skills, projects, companies, technologies..." autocomplete="off">
+      </div>
+
+      <div class="view-controls">
+        <div class="mode-toggle">
+          <button id="view-detailed" class="mode-btn active">Detailed View</button>
+          <button id="view-recruiter" class="mode-btn">Recruiter View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Professional Summary -->
+    <section id="summary" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Professional Summary
+        </h2>
+      </div>
+
+      <div class="summary-card"></div>
+    </section>
+
+    <!-- Section: Skills & Qualifications -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Skills & Qualifications
+        </h2>
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Click any skill chip to filter timeline & projects</span>
+      </div>
+
+      <div class="skills-dashboard"></div>
+    </section>
+
+    <!-- Section: Work Experience -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Work Experience
+        </h2>
+      </div>
+
+      <div class="timeline"></div>
+    </section>
+
+    <!-- Section: Key Projects -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Key Projects
+        </h2>
+      </div>
+
+      <!-- Project Filter Pills -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="laravel">Laravel</button>
+        <button class="filter-btn" data-filter="react">ReactJS</button>
+        <button class="filter-btn" data-filter="codeigniter">CodeIgniter</button>
+        <button class="filter-btn" data-filter="wordpress">WordPress</button>
+        <button class="filter-btn" data-filter="postgresql">PostgreSQL</button>
+      </div>
+
+      <div class="projects-grid"></div>
+    </section>
+
+    <!-- Section: Education, Certifications & Publications -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          Education & Credentials
+        </h2>
+      </div>
+
+      <div class="dual-grid"></div>
+    </section>
+
+    <!-- Section: References -->
+    <section id="references" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Professional References
+        </h2>
+      </div>
+
+      <div class="dual-grid"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Fil Joseph Elman &bull; Technical Lead &amp; Full-Stack Developer</p>
+      <p style="margin-top: 6px; font-size: 0.8rem;">
+        Designed &amp; engineered for performance, precision, and readability.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal for Raw Markdown -->
+  <div id="modal-markdown" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Raw Resume Markdown (resume.md)</h3>
+        <button id="btn-close-modal" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="markdown-raw-content"># Fil Joseph Elman
 
 **Technical Lead | Full-Stack Developer | API Integration | PHP | Python | IoT | Artificial Intelligence**  
 📍 Davao, Davao Region, Philippines
@@ -174,22 +411,6 @@ Now, as a Technical Lead, I apply this broad experience to guide complex project
 
 ---
 
-### **Philam Life**
-**Financial Advisor** | Davao, Philippines  
-*October 2013 – March 2014 (6 months)*
-
-- **Industry / Specialization:** Banking / Financial Services
-- **Role:** Financial Planning / Wealth Management
-- **Position Level:** 1-4 Years Experienced Employee
-- **Overview:** Provided financial solutions and assisted personal financial management using services offered by Philam Life.
-- **Key Services & Focus Areas:**
-  - **Family Secure:** A breadwinner financial life and retirement plan.
-  - **Education:** Structured planning for child's future education fund.
-  - **Investments:** Wealth accumulation, financial diversification, and portfolio advisory.
-- **Skills:** Marketing, Public Relations, Financial Planning, Wealth Management
-
----
-
 ### **Caraga State University**
 **Geographic Information Systems Analyst** | Butuan, Caraga, Philippines  
 *February 2013 – July 2013 (6 months)*
@@ -312,4 +533,56 @@ Now, as a Technical Lead, I apply this broad experience to guide complex project
 
 ### **Ms. Xysa Rhea Bitonga**
 **Project Manager and QA** | Crate Club Group Inc  
-🔗 [facebook.com/msxysarhea](https://www.facebook.com/msxysarhea)
+🔗 [facebook.com/msxysarhea](https://www.facebook.com/msxysarhea)</pre>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-copy-markdown" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Markdown</span>
+        </button>
+      </div>
+    </div>
+  <!-- Dynamic Resume Data Manager Modal -->
+  <div id="modal-admin" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="admin-modal-title">
+    <div class="modal-content modal-admin">
+      <div class="modal-header">
+        <h3 id="admin-modal-title" class="modal-title" style="display:flex;align-items:center;gap:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+          <span>Resume JSON Editor</span>
+        </h3>
+        <button id="btn-close-admin" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="admin-panel active">
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:10px;">
+          This resume is stored as one JSON document in the <code>resumes</code> table (slug <code>tech</code>).
+          Edit it below and save to update the page.
+        </p>
+        <textarea id="admin-json-editor" class="admin-textarea" rows="24" spellcheck="false"
+          style="width:100%; font-family:var(--font-mono); font-size:0.8rem; line-height:1.5; white-space:pre;"></textarea>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:12px;">
+          <button id="btn-admin-save" class="btn btn-primary btn-sm">Save JSON</button>
+          <button id="btn-admin-format" class="btn btn-secondary btn-sm">Format</button>
+          <a href="/api/resumes/tech" target="_blank" class="btn btn-secondary btn-sm">GET /api/resumes/tech</a>
+          <span id="admin-json-status" style="font-size:0.8rem; color:var(--text-muted);"></span>
+          <button id="btn-reset-seed" class="btn btn-danger btn-sm" style="margin-left:auto;">Reset to data/tech.json</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-close-admin-footer" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/script.js"></script>
+</body>
+</html>

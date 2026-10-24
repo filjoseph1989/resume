@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fil Joseph Elman - Resume</title>
+  <meta name="description" content="One-page resume of Fil Joseph Elman tailored for an Assistant Property Manager role">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page { size: A4; margin: 0; }
+
+    :root {
+      --ink: #1e293b;        /* names, job titles */
+      --text: #3f4b5b;       /* body copy */
+      --muted: #6b7686;      /* dates, secondary info */
+      --accent: #1f5f7a;     /* section headings, icons, bullets */
+      --accent-soft: #e8f0f4;
+      --line: #dfe5ea;
+      --surface: #f6f8fa;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, sans-serif;
+      font-size: 8.4pt;
+      line-height: 1.28;
+      color: var(--text);
+      background: #e3e7eb;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* Screen: center the A4 sheet; an inline script scales it to fit the viewport */
+    @media screen {
+      html, body { height: 100%; overflow: hidden; }
+      .page {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(var(--fit, 1));
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      padding: 9mm 13mm 8mm;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, .15);
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header { text-align: center; padding-bottom: 5px; border-bottom: 1px solid var(--line); }
+    h1 { font-size: 20pt; font-weight: 700; letter-spacing: -.01em; line-height: 1.1; color: var(--ink); }
+    .headline { font-size: 10.5pt; margin-top: 2px; color: var(--accent); font-weight: 500; }
+    .contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 2px 14px; margin-top: 4px; font-size: 8pt; color: var(--muted); }
+    .contact span { display: inline-flex; align-items: center; gap: 5px; }
+    .contact svg { width: 10px; height: 10px; flex: none; color: var(--accent); }
+
+    /* Sections */
+    h2 {
+      font-size: 12pt;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 6px;
+      padding-bottom: 1px;
+      border-bottom: 2px solid var(--accent-soft);
+    }
+    h3 { font-size: 10.5pt; font-weight: 600; color: var(--ink); }
+    p + p { margin-top: 4px; }
+    .about { margin-top: 4px; text-align: justify; }
+
+    /* Professional attributes */
+    .attributes { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 4px; }
+    .attributes h3 { margin-bottom: 3px; }
+    .card {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 4px;
+      padding: 2px 5px;
+      font-size: 8pt;
+      margin-bottom: 3px;
+      /* Fixed two-line height so every card matches */
+      display: flex;
+      align-items: center;
+      height: calc(2.56em + 6px);
+    }
+
+    /* Experience */
+    .job { margin-top: 5px; }
+    .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .job-date { font-size: 8.4pt; white-space: nowrap; color: var(--muted); }
+    .company { margin-top: 1px; color: var(--muted); font-style: italic; }
+    ul { list-style: none; margin-top: 2px; padding-left: 12px; }
+    li { position: relative; padding-left: 10px; margin-top: 1px; }
+    li::before { content: "•"; position: absolute; left: 0; font-weight: 700; color: var(--accent); }
+    li ul { margin-top: 0; padding-left: 4px; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: auto 1fr; gap: 3px 10px; align-items: center; margin-top: 4px; }
+    .skills dt { font-weight: 500; font-size: 8.4pt; white-space: nowrap; color: var(--ink); }
+    .skills dd { display: flex; flex-wrap: wrap; gap: 4px; }
+    .chip {
+      border: 1px solid #cfdfe7;
+      background: var(--accent-soft);
+      color: var(--accent);
+      border-radius: 999px;
+      padding: 0 6px;
+      font-size: 7.4pt;
+      line-height: 1.5;
+    }
+
+    /* Education */
+    .edu { margin-top: 4px; }
+    .edu-head { display: flex; justify-content: space-between; align-items: baseline; }
+    .edu > div:not(.edu-head) { color: var(--muted); }
+    .edu .label { font-weight: 500; color: var(--ink); }
+
+    /* Certifications */
+    .certs { margin-top: 4px; font-size: 8.2pt; }
+    .cert-item { display: flex; justify-content: space-between; align-items: baseline; }
+
+    /* References */
+    .references { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 4px; }
+    .ref-card {
+      border: 1px solid var(--line);
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 4px;
+      padding: 3px 6px;
+      font-size: 7.8pt;
+    }
+    .ref-name { font-weight: 600; color: var(--ink); }
+    .ref-title { color: var(--muted); font-size: 7.2pt; }
+    .ref-contact { color: var(--muted); font-size: 7.2pt; margin-top: 1px; }
+
+    /* Personal Data */
+    .personal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 4px;
+      font-size: 8pt;
+      color: var(--muted);
+    }
+    .personal-grid .label { font-weight: 500; color: var(--ink); }
+
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body data-resume="virtual-assistant">
+  <main class="page"></main>
+
+  <script src="/one-page.js"></script>
+</body>
+</html>

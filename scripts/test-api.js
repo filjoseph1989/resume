@@ -1,6 +1,8 @@
 const http = require('http');
 const server = require('../server');
 
+const PORT = process.env.PORT || 3000;
+
 function request(options, data = null) {
   return new Promise((resolve, reject) => {
     const req = http.request(options, (res) => {
@@ -24,67 +26,36 @@ function request(options, data = null) {
 
 async function runTests() {
   console.log('Testing Resume Server API endpoints...');
+  const base = { host: 'localhost', port: PORT };
+  const json = { 'Content-Type': 'application/json' };
 
   // 1. Health check
-  const health = await request({ host: 'localhost', port: 3000, path: '/health', method: 'GET' });
+  const health = await request({ ...base, path: '/health', method: 'GET' });
   console.log('1. Health check status:', health.status, health.data);
 
-  // 2. Full Resume Payload
-  const resume = await request({ host: 'localhost', port: 3000, path: '/api/resume', method: 'GET' });
-  console.log('2. Full Resume API status:', resume.status, 'Success:', resume.data.success);
-  console.log('   Profile:', resume.data.data.profile.name);
-  console.log('   Categories count:', resume.data.data.skillCategories.length);
-  console.log('   Experiences count:', resume.data.data.experiences.length);
-  console.log('   Projects count:', resume.data.data.projects.length);
+  // 2. List resumes
+  const all = await request({ ...base, path: '/api/resumes', method: 'GET' });
+  console.log('2. Resume list status:', all.status, all.data.data.map(r => r.slug).join(', '));
 
-  // 3. Test Profile Update
-  const updateProfile = await request({
-    host: 'localhost',
-    port: 3000,
-    path: '/api/profile',
-    method: 'PUT',
-    headers: { 'Content-Type': 'application/json' }
-  }, {
-    name: 'Fil Joseph Elman',
-    status_text: 'Available for Technical Leadership & Full-Stack Roles (Dynamic)'
-  });
-  console.log('3. Profile Update status:', updateProfile.status, updateProfile.data.data.status_text);
+  // 3. Fetch each resume's JSON
+  for (const { slug } of all.data.data) {
+    const one = await request({ ...base, path: `/api/resumes/${slug}`, method: 'GET' });
+    const d = one.data.data;
+    console.log(`3. GET ${slug}:`, one.status, (d.profile || d).name);
+  }
 
-  // 4. Test Create Experience
-  const newExp = await request({
-    host: 'localhost',
-    port: 3000,
-    path: '/api/experiences',
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' }
-  }, {
-    company: 'Test Company Labs',
-    role: 'Staff Architect',
-    location: 'Remote',
-    duration: '2026 – Present',
-    description: 'Testing dynamic insertion',
-    achievements: ['Engineered scalable test pipeline'],
-    technologies: ['PostgreSQL', 'Node.js']
-  });
-  console.log('4. Create Experience status:', newExp.status, 'ID:', newExp.data.data.id);
+  // 4. Update the tech resume, then reset it from its seed file
+  const tech = (await request({ ...base, path: '/api/resumes/tech', method: 'GET' })).data.data;
+  tech.profile.status = 'Updated by test-api';
+  const put = await request({ ...base, path: '/api/resumes/tech', method: 'PUT', headers: json }, tech);
+  console.log('4. PUT tech status:', put.status, put.data.data.profile.status);
 
-  // 5. Test Delete Experience
-  const delExp = await request({
-    host: 'localhost',
-    port: 3000,
-    path: `/api/experiences/${newExp.data.data.id}`,
-    method: 'DELETE'
-  });
-  console.log('5. Delete Experience status:', delExp.status, delExp.data.message);
+  const reset = await request({ ...base, path: '/api/resumes/tech/reset', method: 'POST' });
+  console.log('5. Reset tech status:', reset.status, reset.data.data.profile.status);
 
-  // 6. Test Reset Seed
-  const reset = await request({
-    host: 'localhost',
-    port: 3000,
-    path: '/api/reset-seed',
-    method: 'POST'
-  });
-  console.log('6. Reset Seed status:', reset.status, reset.data.message);
+  // 6. Unknown slug is a 404
+  const missing = await request({ ...base, path: '/api/resumes/nope', method: 'GET' });
+  console.log('6. Unknown resume status:', missing.status);
 
   console.log('All API tests passed cleanly!');
   server.close();

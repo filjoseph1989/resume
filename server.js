@@ -31,11 +31,6 @@ app.get('/health', async (req, res) => {
   }
 });
 
-// Lead Generation Resume Route
-app.get('/lead-generation', (req, res) => {
-  res.sendFile(path.join(__dirname, 'lead-generation', 'index.html'));
-});
-
 // Serve static files
 app.use(express.static(path.join(__dirname)));
 

@@ -4,10 +4,13 @@ A full-stack, dynamic resume and portfolio web application built with **Node.js*
 
 ## Architecture & Features
 
-- **PostgreSQL Database (`resume_db`)**: Stores normalized relational data across 9 tables (`profiles`, `skill_categories`, `skills`, `experiences`, `projects`, `education`, `certifications`, `references`, `publications`).
-- **RESTful API Backend**: Express server with routes for fetching aggregated resume payloads and performing CRUD updates.
-- **Frontend & Dynamic Hydration**: Responsive glassmorphic UI that fetches data in real-time from `/api/resume`, while retaining graceful fallback capabilities.
-- **Admin / Data Manager Modal**: Built-in modal accessible via the **"Edit Data"** button in the navigation bar to edit profile info, manage work experience, update projects, and add/remove skills directly from the browser.
+- **Resume JSON (`data/*.json`)**: Each resume is one JSON file, named by its slug: `tech`, `virtual-assistant`, `data-entry`. These files are the seed data.
+- **PostgreSQL Database (`resume_db`)**: A single `resumes` table (`id` auto-increment primary key, unique `slug`, `data JSONB`, `updated_at`) holds one row per resume.
+- **RESTful API Backend**: Express routes to list, read, replace and reset each resume's JSON.
+- **JSON-rendered pages**: Every resume page renders from `/api/resumes/<slug>`; the slug comes from `<body data-resume="...">`.
+  - `/tech/` uses `script.js`.
+  - `/profile-apm/` (`virtual-assistant`) and `/profile-data-entry/` (`data-entry`) share `one-page.js`.
+- **JSON Editor**: The **"Edit Data"** button on the tech resume opens the resume's JSON for editing, saving and resetting to its seed file.
 - **Interactive Features**: Real-time search, skill chip quick-filtering, project category filters, Recruiter vs Detailed view toggles, dark/light theme switcher, raw markdown viewer, and print-to-PDF formatting.
 
 ---
@@ -29,18 +32,66 @@ PORT=3000
 | :--- | :--- |
 | `npm start` | Start the Express server on `http://localhost:3000` |
 | `npm run dev` | Start development server with automatic file watching |
-| `npm test` | Run the full integration test suite verifying health, API endpoints, CRUD & DB |
-| `npm run seed` | Re-seed `resume_db` tables with baseline resume data |
-| `npm run db:init` | Initialize or update PostgreSQL tables schema |
+| `npm test` | Run the integration tests for health and the resume JSON endpoints |
+| `npm run seed [slug]` | Load `data/*.json` into the `resumes` table (all, or one slug) |
+| `npm run db:init` | Create or migrate the `resumes` table (drops the old normalized tables) |
 
 ---
 
 ## REST API Endpoints
 
 - `GET /health` &mdash; Server and database connection health check
-- `GET /api/resume` &mdash; Complete aggregated resume data payload
-- `GET /api/profile` &bull; `PUT /api/profile` &mdash; Read/update personal details, summary, and expertise
-- `GET /api/experiences` &bull; `POST /api/experiences` &bull; `PUT /api/experiences/:id` &bull; `DELETE /api/experiences/:id` &mdash; Work history
-- `GET /api/projects` &bull; `POST /api/projects` &bull; `PUT /api/projects/:id` &bull; `DELETE /api/projects/:id` &mdash; Projects and portfolio
-- `GET /api/categories` &bull; `POST /api/skills` &bull; `DELETE /api/skills/:id` &mdash; Skill management
-- `POST /api/reset-seed` &mdash; Reset database to default baseline data
+- `GET /api/resumes` &mdash; List resumes (`id`, `slug`, `updated_at`)
+- `GET /api/resumes/:slug` &mdash; One resume's JSON
+- `PUT /api/resumes/:slug` &mdash; Replace one resume's JSON
+- `POST /api/resumes/:slug/reset` &mdash; Reset one resume to `data/<slug>.json`
+
+---
+
+## Backing Up the Database
+
+Use `pg_dump` (installed with PostgreSQL) to back up `resume_db`. Pass the connection details as flags, not `DATABASE_URL`, because the `?schema=public` part of that URL is not accepted by `pg_dump`/`psql`.
+
+```bash
+mkdir -p backups
+```
+
+### Option 1: Custom-format dump (recommended)
+
+A compressed binary dump that `pg_restore` can restore selectively.
+
+```bash
+# Backup
+pg_dump -U fil -h localhost -d resume_db -Fc -f backups/resume_db_$(date +%Y%m%d_%H%M%S).dump
+
+# Restore (replaces the existing tables in resume_db)
+pg_restore -U fil -h localhost -d resume_db --clean --if-exists backups/<file>.dump
+```
+
+### Option 2: Plain SQL dump
+
+A readable `.sql` file of `CREATE TABLE` and data statements.
+
+```bash
+# Backup
+pg_dump -U fil -h localhost -d resume_db -f backups/resume_db_$(date +%Y%m%d_%H%M%S).sql
+
+# Restore into a fresh database
+dropdb -U fil -h localhost resume_db
+createdb -U fil -h localhost resume_db
+psql -U fil -h localhost -d resume_db -f backups/<file>.sql
+```
+
+### Option 3: Export resumes back to `data/*.json`
+
+Edits saved through the JSON editor live only in the database, and `npm run seed` overwrites them with `data/*.json`. To keep those edits in git, write each resume back to its seed file:
+
+```bash
+for slug in tech virtual-assistant data-entry; do
+  psql -U fil -h localhost -d resume_db -Atc "SELECT jsonb_pretty(data) FROM resumes WHERE slug = '$slug'" > "data/$slug.json"
+done
+```
+
+PostgreSQL stores JSONB with its keys sorted, so the exported files will have their keys in a different order than the originals. The content is the same.
+
+> `backups/` is git-ignored: dumps contain personal details (phone number, address), so keep them out of the repository.
