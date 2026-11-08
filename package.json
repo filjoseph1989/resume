@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node --watch server.js",
+    "dev": "node --watch server.js --port 3008",
     "test": "node scripts/test-api.js",
     "seed": "node scripts/seed.js",
     "db:init": "node scripts/init-db.js"

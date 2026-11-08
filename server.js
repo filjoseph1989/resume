@@ -7,7 +7,12 @@ const apiRoutes = require('./routes/api');
 const { pool } = require('./db');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+// Allow `pnpm dev --port 3007` / `--port=3007` to override PORT
+const portArgIndex = process.argv.findIndex((arg) => arg === '--port' || arg.startsWith('--port='));
+const portArg = portArgIndex === -1
+  ? undefined
+  : process.argv[portArgIndex].split('=')[1] || process.argv[portArgIndex + 1];
+const PORT = portArg || process.env.PORT || 3008;
 
 // Middleware
 app.use(cors());

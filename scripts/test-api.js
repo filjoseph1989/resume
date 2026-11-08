@@ -1,7 +1,7 @@
 const http = require('http');
 const server = require('../server');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3008;
 
 function request(options, data = null) {
   return new Promise((resolve, reject) => {
