@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fil Joseph Elman | Administrative Assistant – Personal Injury Law Firm</title>
+  <meta name="description" content="Organized, detail-oriented Administrative Assistant tailored for Personal Injury Law Firms. Experienced in confidential medical records management, case research, calendar coordination, and BPO operations.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body data-resume="tech-new">
+  <!-- Ambient background glow effect -->
+  <div class="ambient-glow" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="container">
+      <div class="navbar-inner">
+        <a href="#hero" class="nav-brand">
+          <div class="nav-brand-badge">FE</div>
+          <span>Fil Joseph Elman</span>
+        </a>
+
+        <div class="nav-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle dark/light theme" title="Toggle theme">
+            <!-- Icon injected by script.js -->
+          </button>
+          <button id="admin-toggle-btn" class="btn btn-secondary" title="Edit this resume's JSON in PostgreSQL">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            <span>Edit Data</span>
+          </button>
+          <button onclick="handlePrint()" class="btn btn-primary" title="Print or save as PDF">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"></polyline>
+              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+              <rect x="6" y="14" width="12" height="8"></rect>
+            </svg>
+            <span>Print PDF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-card">
+        <div class="hero-header">
+          <div class="hero-info">
+            <div class="status-pill"></div>
+            <h1 class="hero-name"></h1>
+            <p class="hero-tagline"></p>
+            <p class="hero-location"></p>
+
+            <div class="hero-actions">
+              <button id="btn-copy-email" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+                <span>Copy Email</span>
+              </button>
+
+              <button id="btn-copy-phone" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+                <span>Copy Phone</span>
+              </button>
+
+              <button id="btn-view-markdown" class="btn btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+                <span>View Raw Markdown</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Badges Grid -->
+        <div class="contact-grid"></div>
+      </div>
+    </section>
+
+    <!-- Controls Bar: Real-time Search & View Mode -->
+    <div class="controls-bar">
+      <div class="search-box">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="search-input" placeholder="Search skills, case initiatives, tools, records, experience..." autocomplete="off">
+      </div>
+
+      <div class="view-controls">
+        <div class="mode-toggle">
+          <button id="view-detailed" class="mode-btn active">Detailed View</button>
+          <button id="view-recruiter" class="mode-btn">Recruiter View</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Professional Summary -->
+    <section id="summary" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          Professional Summary
+        </h2>
+      </div>
+
+      <div class="summary-card"></div>
+    </section>
+
+    <!-- Section: Skills & Qualifications -->
+    <section id="skills" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          Skills & Qualifications
+        </h2>
+        <span style="font-size: 0.82rem; color: var(--text-muted);">Click any skill chip to filter timeline & projects</span>
+      </div>
+
+      <div class="skills-dashboard"></div>
+    </section>
+
+    <!-- Section: Work Experience -->
+    <section id="experience" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+          Work Experience
+        </h2>
+      </div>
+
+      <div class="timeline"></div>
+    </section>
+
+    <!-- Section: Key Projects -->
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+          Key Initiatives & Case Workflows
+        </h2>
+      </div>
+
+      <!-- Project Filter Pills -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Initiatives</button>
+        <button class="filter-btn" data-filter="medical">Medical Records</button>
+        <button class="filter-btn" data-filter="case">Case Research</button>
+        <button class="filter-btn" data-filter="calendar">Admin &amp; Calendar</button>
+        <button class="filter-btn" data-filter="compliance">Data Compliance</button>
+      </div>
+
+      <div class="projects-grid"></div>
+    </section>
+
+    <!-- Section: Education, Certifications & Publications -->
+    <section id="education" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+            <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+          </svg>
+          Education & Credentials
+        </h2>
+      </div>
+
+      <div class="dual-grid"></div>
+    </section>
+
+    <!-- Section: References -->
+    <section id="references" class="section">
+      <div class="section-header">
+        <h2 class="section-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+          Professional References
+        </h2>
+      </div>
+
+      <div class="dual-grid"></div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Fil Joseph Elman &bull; Administrative Assistant &bull; Personal Injury Support</p>
+      <p style="margin-top: 6px; font-size: 0.8rem;">
+        Committed to operational excellence, absolute confidentiality, and client satisfaction.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal for Raw Markdown -->
+  <div id="modal-markdown" class="modal-backdrop" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Raw Resume Markdown</h3>
+        <button id="btn-close-modal" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <pre id="markdown-raw-content"># Fil Joseph Elman
+
+**Administrative Assistant • Personal Injury Case Support • Medical Records & Confidential File Management • Remote Operations**  
+📍 Davao, Davao Region, Philippines (Remote · Mon–Fri, 9AM–6PM EST)  
+**Status:** Available for Full-Time Legal Administrative Assistant Role (Mon–Fri, 9AM–6PM EST)
+
+---
+
+### Contact Information
+
+- **Address:** Davao City, Davao Region, Philippines
+- **Phone / Mobile:** [+63 912 491 8787](tel:+639124918787)
+- **Email:** [filjoseph22@gmail.com](mailto:filjoseph22@gmail.com)
+- **LinkedIn:** [linkedin.com/in/filjoseph](https://www.linkedin.com/in/filjoseph)
+- **Portfolio / Website:** [filjoseph1989.github.io](https://filjoseph1989.github.io)
+
+---
+
+## Professional Summary
+
+Organized, dependable administrative professional with over a decade of remote operations, records management, and BPO support experience. Proven track record of managing confidential documentation, maintaining systematic digital filing systems, and conducting investigative research to support fast-moving professional teams.
+
+Meticulous in medical records cataloging, client and stakeholder communication, and cross-functional coordination. Adept at mastering new proprietary software systems quickly, resolving administrative bottlenecks, and ensuring zero data loss under strict confidentiality protocols. Fully equipped with compliant primary and backup workstations, redundant high-speed internet, and dedicated to the Mon–Fri, 9AM–6PM EST schedule.
+
+### Key Areas of Expertise
+- **Medical Records & Confidentiality:** Systematic collection, cataloging, indexing, and safeguarding of confidential client and medical records in strict compliance with data privacy standards.
+- **Case Research & Detail Gathering:** Investigative research to uncover, cross-reference, and summarize key case facts, incident documentation, and records to support personal injury claims.
+- **Day-to-Day Administrative Support:** Comprehensive calendar coordination, inbox triage, appointment scheduling across US time zones, tracking critical deadlines, and drafting correspondence.
+- **Legal Team Operations & Alignment:** Proactive collaboration with attorneys, paralegals, and administrative colleagues to streamline case progression and keep legal operations running smoothly.
+- **BPO & Remote Excellence (10+ Yrs):** Extensive track record delivering clear, confident written and verbal English communication with clients and stakeholders across the US, UK, and Australia.
+- **Hardware Redundancy & Tech Setup:** Fully compliant with firm technical requirements: dual high-spec workstations (primary + backup), 16GB+ RAM, 512GB+ SSD, noise-canceling headset, and fiber internet.
+
+---
+
+## Skills & Qualifications
+
+### Core Skills & Proficiencies
+- **Legal Admin & Records Management:** Medical Records Organization (3 yrs), Confidential Document Management (7 yrs), Case Research & Fact Gathering (3 yrs), Records Request & Follow-up (3 yrs), Client Intake & File Prep (3 yrs), Digital Filing & Indexing (8 yrs), Data Privacy & Compliance (8 yrs)
+- **Administrative & Office Support:** Calendar & Deposition Scheduling (4 yrs), Inbox Triage & Correspondence (6 yrs), Appointment Coordination (5 yrs), Office Support & Administration (7 yrs), Stakeholder & Client Support (8 yrs), Vendor & Provider Coordination (4 yrs), Meeting Agendas & Minutes (5 yrs)
+- **Productivity & Office Suites:** Microsoft Excel (Formulas, Tables, VLOOKUP) (11 yrs), Microsoft Word & Document Formatting (11 yrs), Google Workspace (Drive, Docs, Sheets) (8 yrs), Adobe Acrobat / PDF Redaction & Indexing (6 yrs), Microsoft Outlook & Teams (5 yrs), Cloud Document Storage (7 yrs)
+- **CRM, Case & Task Management:** HubSpot CRM (2 yrs), Asana (3 yrs), Notion (3 yrs), ClickUp (2 yrs), Jira (4 yrs), Trello (5 yrs), Legal Case Tools (Clio, Filevine, MyCase aptitude)
+- **Data Integrity, Auditing & Problem Solving:** High-Accuracy Data Entry (99%+) (8 yrs), Discrepancy Auditing & Reconciliation (6 yrs), Invoicing & Billing Records (3 yrs), End-of-Day Status Reports (7 yrs), Standard Operating Procedures (SOPs) (5 yrs), Process & Workflow Improvement (6 yrs)
+- **Technical Specifications & Hardware:** Primary Workstation (16GB RAM, 512GB SSD, macOS/Win), Backup Workstation (16GB RAM, 512GB SSD), Noise-Cancelling Headset with Mic, High-Speed Fiber Internet + Mobile Hotspot Backup
+- **Communication & Strengths:** Clear, Confident Written & Verbal English (11 yrs), US Timezone Alignment (Mon–Fri, 9AM–6PM EST), High Emotional Intelligence & Client Empathy, Self-Directed Organization
+
+---
+
+## Work Experience
+
+### **Senpai Technologies**
+**Administrative & Business Development Partner** | United Kingdom (Remote · US/UK Hours)  
+*August 2026 – Present (3 months)*
+
+- Coordinate and schedule discovery and partner calls, managing calendar invitations and eliminating double-booking across EST, GMT, and Asia-Pacific time zones.
+- Maintain prospect and partner records with strict attention to detail, logging all communications, contact info, and follow-up deadlines accurately.
+- Draft clear, professional written communications and follow-ups, maintaining a high response rate and polished organizational voice.
+- Organize digital records and communication logs daily so leadership has instant access to up-to-date interaction histories.
+
+### **Creative One Growth**
+**Administrative & Operations Virtual Assistant** | Davao, Philippines (Remote)  
+*June 2025 – Present (1 year 5 months)*
+
+- Managed daily inbox triage, prioritizing urgent stakeholder inquiries, drafting professional responses, and routing messages to appropriate team members.
+- Maintained and organized client records in HubSpot CRM, conducting weekly data quality audits to eliminate duplicates and verify contact details.
+- Conducted targeted background research to gather verified details on prospective accounts, compiling organized briefing summaries for leadership.
+- Coordinated project workflows and deadlines in Asana and Notion, ensuring deliverables and operational milestones remained on schedule.
+- Prepared monthly billing invoices and processed administrative documentation with 100% numerical accuracy.
+
+### **Picture Works Australia**
+**Client Operations Coordinator & Integration Specialist** | Melbourne, Victoria, Australia (Remote)  
+*May 2021 – September 2023 (2 years 5 months)*
+
+- Managed day-to-day client communications, serving as the main contact point for order inquiries, status reports, and service requests.
+- Investigated and resolved complex order discrepancies and system record errors by systematically cross-referencing transactional data.
+- Documented operational procedures, support resolutions, and client workflows into clear standard operating procedures (SOPs).
+- Partnered closely with cross-functional teams to keep client operations moving smoothly and deliver timely status updates.
+
+### **uBind**
+**Insurance Records & Policy Data Specialist** | Melbourne, Victoria, Australia (Remote)  
+*June 2020 – February 2021 (9 months)*
+
+- Built and audited detailed Microsoft Excel workbooks containing complex conditional logic, formulas, and regulatory data validation rules.
+- Ensured high data integrity for sensitive insurance policy records, verifying that client questions and policyholder disclosures complied with standards.
+- Collaborated with insurance underwriters and product managers to translate underwriting guidelines into structured data workflows.
+
+### **Philam Life**
+**Financial & Insurance Records Advisor** | Davao City, Philippines  
+*January 2013 – December 2014 (2 years)*
+
+- Conducted in-depth client intake consultations to gather personal, medical, and financial histories for policy qualification.
+- Maintained strict confidentiality of sensitive personal and medical records in accordance with insurance compliance regulations.
+- Coordinated policy claims processing, gathering required medical receipts, incident documentation, and death/injury certificates for adjusters.
+- Managed ongoing client portfolio reviews, maintaining active contact and updating policyholder records.
+
+### **Caraga State University**
+**Geographic Information Systems (GIS) Analyst & Records Specialist** | Butuan, Caraga, Philippines  
+*February 2013 – July 2013 (6 months)*
+
+- Researched and compiled legal land titles, property deeds, and survey documents from government archives and local registries.
+- Systematically organized and cross-referenced municipal property boundaries, verifying legal descriptions against physical documentation.
+- Digitized archival paper records into secure digital geographic vector databases, ensuring zero data loss and accurate indexing.
+
+### **Green Pine Agricultural Development Corporation**
+**Data Encoder & Records Analyst** | Butuan, Caraga, Philippines  
+*October 2012 – February 2013 (5 months)*
+
+- Encoded daily operational and production data with 99.8%+ accuracy under tight end-of-day reporting deadlines.
+- Audited production records to identify discrepancies, investigating source documents and resolving numerical conflicts.
+- Compiled and formatted weekly and monthly operational reports delivered to key corporate stakeholders, including San Miguel Corporation.
+
+---
+
+## Key Initiatives & Case Workflows
+
+### **Medical Records & Case Intake Organization System**
+- Standardized naming conventions and digital folder hierarchies for incoming records, slashing document retrieval time by 60%.
+- Implemented pre-check confidentiality audits ensuring all sensitive identifiers and HIPAA-sensitive medical files remain restricted.
+- Created a checklist-driven intake protocol to verify completeness of incoming medical records before escalating to legal review.
+
+### **Case Preparation & Fact-Gathering Research Framework**
+- Built comprehensive case summary templates capturing timeline of events, medical providers, and communication histories in one centralized view.
+- Tracked outstanding third-party document requests, setting automated follow-up cadences that prevented case delays.
+- Cross-referenced police reports, medical notes, and correspondence to flag timeline inconsistencies early.
+
+### **Legal Office Administrative & Calendar Scheduling Pipeline**
+- Coordinated complex calendar schedules across EST, PST, and overseas time zones without a single double-booking error.
+- Established inbox triage workflows that sorted urgent client inquiries from routine notifications, maintaining a sub-1-hour first response time.
+- Prepared daily morning briefing agendas outlining upcoming deadlines, scheduled calls, and pending record requests.
+
+### **High-Integrity Data Validation & Compliance Auditing (uBind)**
+- Formulated extensive spreadsheet logic that prevented users from submitting incomplete or invalid policy records.
+- Audited over 10,000+ data points for accuracy, ensuring absolute compliance with client specifications and underwriting guidelines.
+- Documented system validation criteria into comprehensive user manuals and reference guides.
+
+---
+
+## Education
+
+### **Caraga State University**
+**Bachelor of Science in Computer Science** | Butuan City, Philippines  
+*June 2006 – March 2012*  
+📍 **Campus Address:** National Road, Barangay Ampayon, Butuan City, Philippines
+
+- **Thesis:** *A Ten (10) Peso Attribute Classifier for Coin Detection* (Pattern Recognition & Automated Classification)
+- **Leadership & Campus Affiliations:**
+  - **Project Director** – Junior Philippine Computer Society (JPCS)
+  - **Vice President** – Computer Science Society (CSS)
+- **Core Focus & Coursework:** Database Systems & Information Management, Data Structures & Logic, Software Engineering & Documentation, Research Methodologies & Technical Writing, Systems Analysis & Workflow Design.
+
+---
+
+## Certifications
+- Project Management for Remote Operations & Professional Services
+- Advanced Document Formatting & Spreadsheet Data Modeling
+- Data Privacy, Confidentiality & Information Security Protocols
+- Principle of Organization & Workflow Systems
+- Business English & Executive Communications
+
+---
+
+## References
+
+### **Professional References**
+Available upon request with verified international and remote supervisory contacts from Senpai Technologies, Creative One Growth, and Picture Works Australia.  
+✉️ [filjoseph22@gmail.com](mailto:filjoseph22@gmail.com) | 📞 [+63 912 491 8787](tel:+639124918787)</pre>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-copy-markdown" class="btn btn-primary">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+          </svg>
+          <span>Copy Markdown</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Resume Data Manager Modal -->
+  <div id="modal-admin" class="modal-backdrop" aria-hidden="true" role="dialog" aria-labelledby="admin-modal-title">
+    <div class="modal-content modal-admin">
+      <div class="modal-header">
+        <h3 id="admin-modal-title" class="modal-title" style="display:flex;align-items:center;gap:10px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-light)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
+            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+          </svg>
+          <span>Resume JSON Editor</span>
+        </h3>
+        <button id="btn-close-admin" class="btn-icon" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="admin-panel active">
+        <p style="font-size:0.85rem; color:var(--text-secondary); margin-bottom:10px;">
+          This resume is stored as one JSON document in the <code>resumes</code> table (slug <code>tech-new</code>).
+          Edit it below and save to update the page.
+        </p>
+        <textarea id="admin-json-editor" class="admin-textarea" rows="24" spellcheck="false"
+          style="width:100%; font-family:var(--font-mono); font-size:0.8rem; line-height:1.5; white-space:pre;"></textarea>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:12px;">
+          <button id="btn-admin-save" class="btn btn-primary btn-sm">Save JSON</button>
+          <button id="btn-admin-format" class="btn btn-secondary btn-sm">Format</button>
+          <a href="/api/resumes/tech-new" target="_blank" class="btn btn-secondary btn-sm">GET /api/resumes/tech-new</a>
+          <span id="admin-json-status" style="font-size:0.8rem; color:var(--text-muted);"></span>
+          <button id="btn-reset-seed" class="btn btn-danger btn-sm" style="margin-left:auto;">Reset to data/tech-new.json</button>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="btn-close-admin-footer" class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="/script.js"></script>
+</body>
+</html>

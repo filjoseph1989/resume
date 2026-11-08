@@ -21,7 +21,7 @@ The application connects to PostgreSQL using credentials matching your local env
 
 ```env
 DATABASE_URL=postgresql://fil:@localhost:5432/resume_db?schema=public
-PORT=3000
+PORT=3008
 ```
 
 ---
@@ -30,7 +30,7 @@ PORT=3000
 
 | Command | Description |
 | :--- | :--- |
-| `npm start` | Start the Express server on `http://localhost:3000` |
+| `npm start` | Start the Express server on `http://localhost:3008` |
 | `npm run dev` | Start development server with automatic file watching |
 | `npm test` | Run the integration tests for health and the resume JSON endpoints |
 | `npm run seed [slug]` | Load `data/*.json` into the `resumes` table (all, or one slug) |

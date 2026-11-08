@@ -29,6 +29,7 @@
       --c-tech: #818cf8;
       --c-va: #2dd4bf;
       --c-data: #fbbf24;
+      --c-legal: #38bdf8;
     }
     @media (prefers-color-scheme: light) {
       :root:not([data-theme="dark"]) {
@@ -44,6 +45,7 @@
         --c-tech: #4f46e5;
         --c-va: #0d9488;
         --c-data: #b45309;
+        --c-legal: #0284c7;
       }
     }
     :root[data-theme="light"] {
@@ -59,6 +61,7 @@
       --c-tech: #4f46e5;
       --c-va: #0d9488;
       --c-data: #b45309;
+      --c-legal: #0284c7;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -171,6 +174,7 @@
     }
     .card.va { --c: var(--c-va); }
     .card.data { --c: var(--c-data); }
+    .card.legal { --c: var(--c-legal); }
 
     .icon {
       width: 48px; height: 48px;
@@ -293,6 +297,21 @@
         <p class="desc">Accurate data encoding, invoicing and record keeping for remote teams in AU, UK and US.</p>
         <ul class="tags">
           <li>Excel</li><li>HubSpot</li><li>Invoicing</li><li>Order Processing</li>
+        </ul>
+        <span class="cta">View resume
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </span>
+      </a>
+
+      <a class="card legal" href="/tech-new/">
+        <div class="icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h2>Administrative Assistant</h2>
+        <div class="role">Personal Injury Law Firm Partner</div>
+        <p class="desc">Confidential medical records management, case research, calendar scheduling, and legal office operations.</p>
+        <ul class="tags">
+          <li>Medical Records</li><li>Case Research</li><li>Confidentiality</li><li>EST Schedule</li>
         </ul>
         <span class="cta">View resume
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
